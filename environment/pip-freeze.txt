@@ -1,0 +1,150 @@
+addict==2.4.0
+annotated-types==0.7.0
+antlr4-python3-runtime==4.9.3
+anyio==4.12.1
+asttokens==3.0.2
+attrs @ file:///home/conda/feedstock_root/build_artifacts/attrs_1741918516150/work
+blinker==1.9.0
+certifi==2026.7.22
+charset-normalizer==3.5.1
+click==8.1.8
+cloudpickle==3.1.2
+cmake==4.4.2
+colorama @ file:///home/conda/feedstock_root/build_artifacts/colorama_1733218098505/work
+comm==0.2.3
+ConfigArgParse==1.7.5
+contourpy==1.3.0
+cycler @ file:///home/conda/feedstock_root/build_artifacts/cycler_1733332471406/work
+dash==4.4.1
+decorator==5.3.1
+defusedxml==0.7.1
+einops==0.8.2
+exceptiongroup==1.3.1
+executing==2.2.1
+faiss==1.8.0
+fastjsonschema==2.21.2
+filelock==3.19.1
+Flask==3.1.3
+fonttools==4.60.2
+fsspec==2025.10.0
+ftfy==6.3.1
+fvcore==0.1.5.post20221221
+gitdb @ file:///home/conda/feedstock_root/build_artifacts/gitdb_1735887193964/work
+GitPython @ file:///home/conda/feedstock_root/build_artifacts/gitpython_1753444155689/work
+-e git+https://github.com/bagh2178/SG-Nav.git@d56863c96dea311aaa67fb0d39a1a8ccc3f0487f#egg=groundingdino&subdirectory=GroundingDINO
+gym==0.26.2
+gym-notices==0.1.0
+h11==0.16.0
+-e git+https://github.com/bagh2178/SG-Nav.git@d56863c96dea311aaa67fb0d39a1a8ccc3f0487f#egg=habitat&subdirectory=habitat-lab
+habitat-sim==0.2.4
+hf-xet==1.6.0
+httpcore==1.0.9
+httpx==0.28.1
+huggingface_hub==0.36.2
+idna==3.19
+imageio @ file:///home/conda/feedstock_root/build_artifacts/imageio_1738273805233/work
+imageio-ffmpeg @ file:///home/conda/feedstock_root/build_artifacts/imageio-ffmpeg_1737102630951/work
+importlib_metadata==8.7.1
+importlib_resources==6.5.2
+inflect==7.5.0
+iopath==0.1.10
+ipython==8.18.1
+ipywidgets==8.1.9
+itsdangerous==2.2.0
+janus==2.0.0
+jedi==0.19.2
+Jinja2==3.1.6
+joblib==1.5.3
+jsonschema==4.25.1
+jsonschema-specifications==2025.9.1
+jupyter_core==5.8.1
+jupyterlab_widgets==3.0.17
+kiwisolver @ file:///home/conda/feedstock_root/build_artifacts/kiwisolver_1725459266648/work
+lazy-loader==0.5
+lit==18.1.8
+llvmlite==0.43.0
+magnum @ file:///opt/conda/envs/py39/conda-bld/habitat-sim_1680303616755/work/build/deps/magnum-bindings/src/python
+MarkupSafe==3.0.3
+-e git+https://github.com/bagh2178/SG-Nav.git@d56863c96dea311aaa67fb0d39a1a8ccc3f0487f#egg=maskrcnn_benchmark&subdirectory=GLIP
+matplotlib==3.9.4
+matplotlib-inline==0.2.2
+more-itertools==10.8.0
+mpmath==1.3.0
+narwhals==2.21.0
+nbformat==5.10.4
+nest-asyncio==1.6.0
+networkx==3.2.1
+ninja==1.11.1.1
+nltk==3.9.2
+numba @ file:///home/conda/feedstock_root/build_artifacts/numba_1718888028049/work
+numpy==1.26.4
+numpy-quaternion @ file:///home/conda/feedstock_root/build_artifacts/quaternion_1719301748607/work
+ollama==0.6.2
+omegaconf==2.3.1
+open3d @ file:///root/autodl-tmp/Habitat/downloads/open3d-0.19.0-cp39-cp39-manylinux_2_31_x86_64.whl#sha256=4187b5997650e5f7a5faebea28d1bb24a8a103c54e3f37e6a657b0b2cdd9c560
+opencv-python==4.11.0.86
+opencv-python-headless==4.11.0.86
+packaging @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_packaging_1785888127/work
+pandas==2.3.3
+parso==0.8.7
+pexpect==4.9.0
+pillow==11.3.0
+platformdirs==4.4.0
+plotly==6.9.0
+portalocker==3.2.0
+prettytable==3.16.0
+prompt_toolkit==3.0.52
+pslpython==2.3.3
+ptyprocess==0.7.0
+pure_eval==0.2.3
+pycocotools==2.0.8
+pydantic==2.13.4
+pydantic_core==2.46.4
+Pygments==2.21.0
+pyparsing @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_pyparsing_1753873557/work
+pyquaternion==0.9.9
+python-dateutil @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_python-dateutil_1751104122/work
+-e git+https://github.com/facebookresearch/pytorch3d.git@297020a4b1d7492190cb4a909cafbd2c81a12cb5#egg=pytorch3d
+pytz==2026.3.post1
+PyYAML==6.0.3
+referencing==0.36.2
+regex==2026.1.15
+requests==2.32.5
+retrying==1.4.2
+rpds-py==0.27.1
+safetensors==0.7.0
+scikit-fmm==2025.1.29
+scikit-image==0.24.0
+scikit-learn==1.6.1
+scipy @ file:///home/conda/feedstock_root/build_artifacts/scipy-split_1716470218293/work/dist/scipy-1.13.1-cp39-cp39-linux_x86_64.whl#sha256=e6696cb8683d94467891b7648e068a3970f6bc0a1b3c1aa7f9bc89458eafd2f0
+-e git+https://github.com/bagh2178/SG-Nav.git@d56863c96dea311aaa67fb0d39a1a8ccc3f0487f#egg=segment_anything&subdirectory=segment_anything
+six @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_six_1753199211/work
+smmap @ file:///home/conda/feedstock_root/build_artifacts/smmap_1611376390914/work
+stack-data==0.6.3
+supervision==0.22.0
+sympy==1.14.0
+tabulate==0.9.0
+termcolor==3.1.0
+threadpoolctl==3.6.0
+tifffile==2024.8.30
+timm==0.9.16
+tokenizers==0.13.3
+tomli==2.4.1
+torch==2.0.1+cu118
+torchvision==0.15.2+cu118
+tornado @ file:///home/conda/feedstock_root/build_artifacts/tornado_1754731992698/work
+tqdm @ file:///home/conda/feedstock_root/build_artifacts/tqdm_1735661334605/work
+traitlets==5.15.1
+transformers==4.30.0
+triton==2.0.0
+typeguard==4.5.2
+typing-inspection==0.4.2
+typing_extensions==4.16.0
+tzdata==2026.3
+urllib3==2.6.3
+wcwidth==0.8.2
+Werkzeug==3.1.8
+widgetsnbextension==4.0.16
+yacs==0.1.8
+yapf==0.40.2
+zipp==3.23.1

@@ -1,0 +1,37 @@
+# Licensed datasets
+**/MatterPort3D/
+**/mp3d/
+**/hm3d/
+**/scene_datasets/
+**/data/datasets/
+*.glb
+*.navmesh
+*.house
+
+# Model weights
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.bin
+**/GLIP/MODEL/
+**/models/ollama/
+
+# Environments, caches, and builds
+envs/
+conda_pkgs/
+__pycache__/
+*.pyc
+*.pyo
+*.so
+build/
+dist/
+*.egg-info/
+.cache/
+
+# Secrets
+.env
+.env.*
+*.pem
+id_rsa*
+id_ed25519*
