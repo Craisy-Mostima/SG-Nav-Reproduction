@@ -1,4 +1,3 @@
-```markdown
 # SG-Nav MP3D Reproduction
 
 This repository contains a reproducibility snapshot for [bagh2178/SG-Nav](https://github.com/bagh2178/SG-Nav), including the cloud source snapshot, compatibility and visualization code, runtime patches, raw logs, Habitat metrics, and visualization videos.
@@ -127,4 +126,4 @@ This repository intentionally does not include:
 - CUDA build artifacts
 
 Obtain datasets and model weights from their official sources and comply with their respective licenses and terms of use.
-```
+
