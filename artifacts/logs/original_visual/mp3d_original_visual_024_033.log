@@ -1,0 +1,445 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+VISION BACKBONE USE GRADIENT CHECKPOINTING:  False
+UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+LANGUAGE BACKBONE USE GRADIENT CHECKPOINTING:  False
+Some weights of the model checkpoint at /mnt/d/Habitat/models/bert-base-uncased were not used when initializing BertModel: ['bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight', 'bert.pooler.dense.bias', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+EARLY FUSION ON, USING MHA-B
+EARLY FUSION ON, USING MHA-B
+EARLY FUSION ON, USING MHA-B
+EARLY FUSION ON, USING MHA-B
+EARLY FUSION ON, USING MHA-B
+EARLY FUSION ON, USING MHA-B
+EARLY FUSION ON, USING MHA-B
+EARLY FUSION ON, USING MHA-B
+final text_encoder_type: /mnt/d/Habitat/models/bert-base-uncased
+Some weights of the model checkpoint at /mnt/d/Habitat/models/bert-base-uncased were not used when initializing BertModel: ['cls.seq_relationship.bias', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+_IncompatibleKeys(missing_keys=[], unexpected_keys=['label_enc.weight'])
+scene graph module init finish!!!
+2026-08-31 21:17:40,472 Initializing dataset ObjectNav-v1
+2026-08-31 21:17:41,048 initializing sim Sim-v0
+[21:17:41:054165]:[Metadata] AttributesManagerBase.h(380)::createFromJsonOrDefaultInternal : <Dataset>: Proposing JSON name : default.scene_dataset_config.json from original name : default| This file does not exist.
+[21:17:41:054276]:[Metadata] AssetAttributesManager.cpp(123)::createObject : Asset attributes (capsule3DSolid:capsule3DSolid_hemiRings_4_cylRings_1_segments_12_halfLen_0.75_useTexCoords_false_useTangents_false) created and registered.
+[21:17:41:054301]:[Metadata] AssetAttributesManager.cpp(123)::createObject : Asset attributes (capsule3DWireframe:capsule3DWireframe_hemiRings_8_cylRings_1_segments_16_halfLen_1) created and registered.
+[21:17:41:054320]:[Metadata] AssetAttributesManager.cpp(123)::createObject : Asset attributes (coneSolid:coneSolid_segments_12_halfLen_1.25_rings_1_useTexCoords_false_useTangents_false_capEnd_true) created and registered.
+[21:17:41:054333]:[Metadata] AssetAttributesManager.cpp(123)::createObject : Asset attributes (coneWireframe:coneWireframe_segments_32_halfLen_1.25) created and registered.
+[21:17:41:054344]:[Metadata] AssetAttributesManager.cpp(123)::createObject : Asset attributes (cubeSolid:cubeSolid) created and registered.
+[21:17:41:054355]:[Metadata] AssetAttributesManager.cpp(123)::createObject : Asset attributes (cubeWireframe:cubeWireframe) created and registered.
+[21:17:41:054369]:[Metadata] AssetAttributesManager.cpp(123)::createObject : Asset attributes (cylinderSolid:cylinderSolid_rings_1_segments_12_halfLen_1_useTexCoords_false_useTangents_false_capEnds_true) created and registered.
+[21:17:41:054380]:[Metadata] AssetAttributesManager.cpp(123)::createObject : Asset attributes (cylinderWireframe:cylinderWireframe_rings_1_segments_32_halfLen_1) created and registered.
+[21:17:41:054392]:[Metadata] AssetAttributesManager.cpp(123)::createObject : Asset attributes (icosphereSolid:icosphereSolid_subdivs_1) created and registered.
+[21:17:41:054403]:[Metadata] AssetAttributesManager.cpp(123)::createObject : Asset attributes (icosphereWireframe:icosphereWireframe_subdivs_1) created and registered.
+[21:17:41:054416]:[Metadata] AssetAttributesManager.cpp(123)::createObject : Asset attributes (uvSphereSolid:uvSphereSolid_rings_8_segments_16_useTexCoords_false_useTangents_false) created and registered.
+[21:17:41:054427]:[Metadata] AssetAttributesManager.cpp(123)::createObject : Asset attributes (uvSphereWireframe:uvSphereWireframe_rings_16_segments_32) created and registered.
+[21:17:41:054434]:[Metadata] AssetAttributesManager.cpp(112)::AssetAttributesManager : Built default primitive asset templates : 12
+[21:17:41:054601]:[Metadata] SceneDatasetAttributesManager.cpp(37)::createObject : File (default) not found, so new default dataset attributes created  and registered.
+[21:17:41:054607]:[Metadata] MetadataMediator.cpp(120)::createSceneDataset : Dataset default successfully created.
+[21:17:41:054618]:[Metadata] AttributesManagerBase.h(380)::createFromJsonOrDefaultInternal : <Physics Manager>: Proposing JSON name : ./data/default.physics_config.json from original name : ./data/default.physics_config.json| This file does not exist.
+[21:17:41:054631]:[Metadata] PhysicsAttributesManager.cpp(26)::createObject : File (./data/default.physics_config.json) not found, so new default physics manager attributes created and registered.
+[21:17:41:054638]:[Metadata] MetadataMediator.cpp(203)::setActiveSceneDatasetName : Previous active dataset  changed to default successfully.
+[21:17:41:054643]:[Metadata] MetadataMediator.cpp(175)::setCurrPhysicsAttributesHandle : Old physics manager attributes  changed to ./data/default.physics_config.json successfully.
+[21:17:41:054650]:[Metadata] MetadataMediator.cpp(66)::setSimulatorConfiguration : Set new simulator config for scene/stage : data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb and dataset : default which is currently active dataset.
+Renderer: NVIDIA GeForce RTX 4090 D/PCIe/SSE2 by NVIDIA Corporation
+OpenGL version: 4.6.0 NVIDIA 580.105.08
+Using optional features:
+    GL_ARB_vertex_array_object
+    GL_ARB_separate_shader_objects
+    GL_ARB_robustness
+    GL_ARB_texture_storage
+    GL_ARB_texture_view
+    GL_ARB_framebuffer_no_attachments
+    GL_ARB_invalidate_subdata
+    GL_ARB_texture_storage_multisample
+    GL_ARB_multi_bind
+    GL_ARB_direct_state_access
+    GL_ARB_get_texture_sub_image
+    GL_ARB_texture_filter_anisotropic
+    GL_KHR_debug
+    GL_KHR_parallel_shader_compile
+    GL_NV_depth_buffer_float
+Using driver workarounds:
+    no-forward-compatible-core-context
+    nv-egl-incorrect-gl11-function-pointers
+    no-layout-qualifiers-on-old-glsl
+    nv-zero-context-profile-mask
+    nv-implementation-color-read-format-dsa-broken
+    nv-cubemap-inconsistent-compressed-image-size
+    nv-cubemap-broken-full-compressed-image-query
+    nv-compressed-block-size-in-bits
+[21:17:41:156699]:[Metadata] MetadataMediator.cpp(297)::getSceneInstanceAttributesByName : Dataset : default has no preloaded SceneInstanceAttributes or StageAttributes named : data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb so loading/creating a new StageAttributes with this name, and then creating a SceneInstanceAttributes with the same name that references this stage.
+[21:17:41:156721]:[Metadata] AttributesManagerBase.h(380)::createFromJsonOrDefaultInternal : <Stage Template>: Proposing JSON name : data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.stage_config.json from original name : data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb| This file does not exist.
+[21:17:41:156785]:[Metadata] AbstractObjectAttributesManagerBase.h(184)::createObject : File (data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb) exists but is not a recognized config filename extension, so new default Stage Template attributes created and registered.
+[21:17:41:156823]:[Metadata] SceneDatasetAttributes.cpp(47)::addNewSceneInstanceToDataset : Dataset : 'default' : Stage Attributes 'data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb' specified in Scene Attributes exists in dataset library.
+[21:17:41:156829]:[Metadata] SceneDatasetAttributes.cpp(84)::addNewSceneInstanceToDataset : Dataset : 'default' : Lighting Layout Attributes 'no_lights' specified in Scene Attributes but does not exist in dataset, so creating.
+[21:17:41:156850]:[Metadata] AttributesManagerBase.h(380)::createFromJsonOrDefaultInternal : <Lighting Layout>: Proposing JSON name : no_lights.lighting_config.json from original name : no_lights| This file does not exist.
+[21:17:41:156865]:[Metadata] LightLayoutAttributesManager.cpp(38)::createObject : File (no_lights) not found, so new default light layout attributes created and registered.
+[21:17:41:156874]:[Sim] Simulator.cpp(235)::createSceneInstance : Navmesh file location in scene instance : 
+[21:17:41:156886]:[Sim] Simulator.cpp(244)::createSceneInstance : Navmesh file not found, checked at filename : ''
+[21:17:41:156902]:[Scene] SceneGraph.h(85)::createDrawableGroup : Created DrawableGroup: 
+[21:17:41:156909]:[Assets] ResourceManager.cpp(308)::loadSemanticSceneDescriptor : SceneInstance : data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb proposed Semantic Scene Descriptor filename : data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.scn
+[21:17:41:156919]:[Assets] ResourceManager.cpp(355)::loadSemanticSceneDescriptor : SSD File Naming Issue! Neither SceneInstanceAttributes-provided name : data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.scn  nor constructed filename : data/MatterPort3D/mp3d/2azQ1b91cZZ/info_semantic.json exist on disk.
+[21:17:41:156939]:[Assets] ResourceManager.cpp(1666)::configureImporterManagerGLExtensions : Importing Basis files as BC7.
+[21:17:41:157117]:[Sim] Simulator.cpp(309)::createSceneInstance : Using scene instance-specified Light key : - no_lights -
+[21:17:41:157124]:[Metadata] MetadataMediator.cpp(66)::setSimulatorConfiguration : Set new simulator config for scene/stage : data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb and dataset : default which is currently active dataset.
+[21:17:41:157141]:[Sim] Simulator.cpp(419)::instanceStageForSceneAttributes : Start to load stage named : data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb with render asset : data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb and collision asset : data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb
+[21:17:41:157191]:[Assets] ResourceManager.cpp(702)::createStageAssetInfosFromAttributes : Frame :{"up":[0,0,1],"front":[0,1,0],"origin":[0,0,0]} for render mesh named : data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb|{"up":[0,0,1],"front":[0,1,0],"origin":[0,0,0]} for semantic mesh named :  with type specified as semantic|Semantic Txtrs : False
+[21:17:41:157198]:[Assets] ResourceManager.cpp(518)::loadStage : Start load render asset data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb .
+[21:17:41:157203]:[Assets] ResourceManager.cpp(984)::loadStageInternal : Attempting to load stage data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb 
+[21:17:41:157209]:[Assets] ResourceManager.cpp(866)::loadRenderAsset : Loading general asset named: data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb
+[21:17:41:157213]:[Assets] ResourceManager.cpp(1666)::configureImporterManagerGLExtensions : Importing Basis files as BC7.
+[21:17:45:549898]:[Assets] ResourceManager.cpp(2105)::loadMaterials : Building 134 materials for asset named '2azQ1b91cZZ.glb' : 
+[21:17:45:549999]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 00:Flat.
+[21:17:45:550018]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 01:Flat.
+[21:17:45:550028]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 02:Flat.
+[21:17:45:550037]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 03:Flat.
+[21:17:45:550049]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 04:Flat.
+[21:17:45:550058]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 05:Flat.
+[21:17:45:550066]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 06:Flat.
+[21:17:45:550075]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 07:Flat.
+[21:17:45:550087]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 08:Flat.
+[21:17:45:550102]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 09:Flat.
+[21:17:45:550112]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 10:Flat.
+[21:17:45:550123]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 11:Flat.
+[21:17:45:550133]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 12:Flat.
+[21:17:45:550141]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 13:Flat.
+[21:17:45:550151]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 14:Flat.
+[21:17:45:550160]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 15:Flat.
+[21:17:45:550170]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 16:Flat.
+[21:17:45:550178]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 17:Flat.
+[21:17:45:550186]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 18:Flat.
+[21:17:45:550195]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 19:Flat.
+[21:17:45:550204]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 20:Flat.
+[21:17:45:550213]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 21:Flat.
+[21:17:45:550221]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 22:Flat.
+[21:17:45:550229]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 23:Flat.
+[21:17:45:550240]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 24:Flat.
+[21:17:45:550249]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 25:Flat.
+[21:17:45:550259]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 26:Flat.
+[21:17:45:550268]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 27:Flat.
+[21:17:45:550277]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 28:Flat.
+[21:17:45:550285]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 29:Flat.
+[21:17:45:550295]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 30:Flat.
+[21:17:45:550303]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 31:Flat.
+[21:17:45:550314]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 32:Flat.
+[21:17:45:550322]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 33:Flat.
+[21:17:45:550331]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 34:Flat.
+[21:17:45:550340]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 35:Flat.
+[21:17:45:550349]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 36:Flat.
+[21:17:45:550357]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 37:Flat.
+[21:17:45:550365]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 38:Flat.
+[21:17:45:550373]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 39:Flat.
+[21:17:45:550383]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 40:Flat.
+[21:17:45:550392]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 41:Flat.
+[21:17:45:550400]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 42:Flat.
+[21:17:45:550409]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 43:Flat.
+[21:17:45:550418]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 44:Flat.
+[21:17:45:550426]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 45:Flat.
+[21:17:45:550435]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 46:Flat.
+[21:17:45:550443]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 47:Flat.
+[21:17:45:550453]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 48:Flat.
+[21:17:45:550461]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 49:Flat.
+[21:17:45:550469]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 50:Flat.
+[21:17:45:550478]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 51:Flat.
+[21:17:45:550486]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 52:Flat.
+[21:17:45:550494]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 53:Flat.
+[21:17:45:550503]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 54:Flat.
+[21:17:45:550511]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 55:Flat.
+[21:17:45:550521]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 56:Flat.
+[21:17:45:550532]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 57:Flat.
+[21:17:45:550539]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 58:Flat.
+[21:17:45:550548]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 59:Flat.
+[21:17:45:550557]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 60:Flat.
+[21:17:45:550566]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 61:Flat.
+[21:17:45:550574]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 62:Flat.
+[21:17:45:550583]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 63:Flat.
+[21:17:45:550594]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 64:Flat.
+[21:17:45:550602]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 65:Flat.
+[21:17:45:550610]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 66:Flat.
+[21:17:45:550620]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 67:Flat.
+[21:17:45:550628]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 68:Flat.
+[21:17:45:550637]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 69:Flat.
+[21:17:45:550645]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 70:Flat.
+[21:17:45:550654]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 71:Flat.
+[21:17:45:550662]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 72:Flat.
+[21:17:45:550675]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 73:Flat.
+[21:17:45:550683]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 74:Flat.
+[21:17:45:550692]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 75:Flat.
+[21:17:45:550701]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 76:Flat.
+[21:17:45:550710]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 77:Flat.
+[21:17:45:550719]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 78:Flat.
+[21:17:45:550728]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 79:Flat.
+[21:17:45:550736]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 80:Flat.
+[21:17:45:550744]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 81:Flat.
+[21:17:45:550752]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 82:Flat.
+[21:17:45:550761]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 83:Flat.
+[21:17:45:550769]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 84:Flat.
+[21:17:45:550777]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 85:Flat.
+[21:17:45:550785]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 86:Flat.
+[21:17:45:550793]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 87:Flat.
+[21:17:45:550801]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 88:Flat.
+[21:17:45:550810]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 89:Flat.
+[21:17:45:550819]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 90:Flat.
+[21:17:45:550827]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 91:Flat.
+[21:17:45:550836]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 92:Flat.
+[21:17:45:550843]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 93:Flat.
+[21:17:45:550852]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 94:Flat.
+[21:17:45:550860]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 95:Flat.
+[21:17:45:550869]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 96:Flat.
+[21:17:45:550877]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 97:Flat.
+[21:17:45:550885]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 98:Flat.
+[21:17:45:550894]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 99:Flat.
+[21:17:45:550903]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 100:Flat.
+[21:17:45:550912]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 101:Flat.
+[21:17:45:550920]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 102:Flat.
+[21:17:45:550928]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 103:Flat.
+[21:17:45:550936]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 104:Flat.
+[21:17:45:550945]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 105:Flat.
+[21:17:45:550953]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 106:Flat.
+[21:17:45:550961]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 107:Flat.
+[21:17:45:550969]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 108:Flat.
+[21:17:45:550979]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 109:Flat.
+[21:17:45:550988]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 110:Flat.
+[21:17:45:550999]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 111:Flat.
+[21:17:45:551007]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 112:Flat.
+[21:17:45:551014]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 113:Flat.
+[21:17:45:551023]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 114:Flat.
+[21:17:45:551031]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 115:Flat.
+[21:17:45:551039]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 116:Flat.
+[21:17:45:551047]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 117:Flat.
+[21:17:45:551055]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 118:Flat.
+[21:17:45:551062]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 119:Flat.
+[21:17:45:551074]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 120:Flat.
+[21:17:45:551083]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 121:Flat.
+[21:17:45:551091]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 122:Flat.
+[21:17:45:551098]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 123:Flat.
+[21:17:45:551106]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 124:Flat.
+[21:17:45:551125]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 125:Flat.
+[21:17:45:551136]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 126:Flat.
+[21:17:45:551143]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 127:Flat.
+[21:17:45:551154]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 128:Flat.
+[21:17:45:551161]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 129:Flat.
+[21:17:45:551170]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 130:Flat.
+[21:17:45:551178]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 131:Flat.
+[21:17:45:551186]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 132:Flat.
+[21:17:45:551194]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 133:Flat.
+[21:17:45:765924]:[Sim] Simulator.cpp(446)::instanceStageForSceneAttributes : Successfully loaded stage named : data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb
+[21:17:45:765958]:[Sim] Simulator.cpp(478)::instanceStageForSceneAttributes : 
+---
+The active scene does not contain semantic annotations : activeSemanticSceneID_ = 0  
+---
+[21:17:45:766030]:[Sim] Simulator.cpp(203)::reconfigure : CreateSceneInstance success == true for active scene name : data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb  with renderer.
+[21:17:45:775675]:[Nav] PathFinder.cpp(571)::build : Building navmesh with 862 x 508 cells
+[21:17:45:994790]:[Nav] PathFinder.cpp(845)::build : Created navmesh with 1339 vertices 682 polygons
+[21:17:45:994908]:[Sim] Simulator.cpp(908)::recomputeNavMesh : reconstruct navmesh successful
+2026-08-31 21:17:45,997 Initializing task ObjectNav-v1
+[SG-Nav Selection] episode indexes [24:34) ids=['24', '25', '26', '27', '28', '29', '30', '31', '32', '33']
+10
+[SG-Nav Progress] Episode 1/10 started (id=24, goal=cabinet)
+Navigate Step: 0FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 1FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 2Navigate Step: 3Navigate Step: 4Navigate Step: 5Navigate Step: 6Navigate Step: 7Navigate Step: 8Navigate Step: 9Navigate Step: 10FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 11Navigate Step: 12Navigate Step: 13Navigate Step: 14Navigate Step: 15Navigate Step: 16Navigate Step: 17Navigate Step: 18Navigate Step: 19Navigate Step: 20Navigate Step: 21Navigate Step: 22Navigate Step: 23Navigate Step: 24Navigate Step: 25Navigate Step: 26FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 27Navigate Step: 28Navigate Step: 29Navigate Step: 30Navigate Step: 31Navigate Step: 32Navigate Step: 33Navigate Step: 34Navigate Step: 35Navigate Step: 36Navigate Step: 37Navigate Step: 38Navigate Step: 39Navigate Step: 40Navigate Step: 41Navigate Step: 42Navigate Step: 43Navigate Step: 44Navigate Step: 45Navigate Step: 46Navigate Step: 47Navigate Step: 48Navigate Step: 49Navigate Step: 50Navigate Step: 51Navigate Step: 52Navigate Step: 53Navigate Step: 54Navigate Step: 55Navigate Step: 56Navigate Step: 57Navigate Step: 58Navigate Step: 59Navigate Step: 60Navigate Step: 61Navigate Step: 62Navigate Step: 63Navigate Step: 64Navigate Step: 65Navigate Step: 66FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 67Navigate Step: 68Navigate Step: 69Navigate Step: 70Navigate Step: 71Navigate Step: 72Navigate Step: 73Navigate Step: 74Navigate Step: 75Navigate Step: 76Navigate Step: 77FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 78Navigate Step: 79Navigate Step: 80Navigate Step: 81Navigate Step: 82Navigate Step: 83Navigate Step: 84Navigate Step: 85[SG-Nav Progress] Episode 1/10 completed | steps=108 | success=1.0 | spl=0.6774629600232169
+0 {'distance_to_goal': 0.010155334137380123, 'success': 1.0, 'spl': 0.6774629600232169, 'softspl': 0.676593605875953}
+2026-08-31 21:30:55,189 distance_to_goal: 0.010155334137380123
+2026-08-31 21:30:55,189 success: 1.0
+2026-08-31 21:30:55,189 spl: 0.6774629600232169
+2026-08-31 21:30:55,189 softspl: 0.676593605875953
+[SG-Nav Progress] Episode 2/10 started (id=25, goal=cabinet)
+Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 1FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 2Navigate Step: 3Navigate Step: 4Navigate Step: 5Navigate Step: 6Navigate Step: 7Navigate Step: 8Navigate Step: 9Navigate Step: 10Navigate Step: 11Navigate Step: 12Navigate Step: 13Navigate Step: 14Navigate Step: 15Navigate Step: 16Navigate Step: 17Navigate Step: 18Navigate Step: 19Navigate Step: 20Navigate Step: 21Navigate Step: 22Navigate Step: 23Navigate Step: 24Navigate Step: 25Navigate Step: 26Navigate Step: 27Navigate Step: 28Navigate Step: 29Navigate Step: 30Navigate Step: 31Navigate Step: 32Navigate Step: 33Navigate Step: 34Navigate Step: 35Navigate Step: 36Navigate Step: 37Navigate Step: 38Navigate Step: 39Navigate Step: 40Navigate Step: 41Navigate Step: 42Navigate Step: 43Navigate Step: 44Navigate Step: 45Navigate Step: 46Navigate Step: 47Navigate Step: 48Navigate Step: 49Navigate Step: 50Navigate Step: 51Navigate Step: 52Navigate Step: 53Navigate Step: 54Navigate Step: 55Navigate Step: 56Navigate Step: 57Navigate Step: 58Navigate Step: 59Navigate Step: 60Navigate Step: 61Navigate Step: 62Navigate Step: 63Navigate Step: 64Navigate Step: 65Navigate Step: 66Navigate Step: 67Navigate Step: 68Navigate Step: 69Navigate Step: 70Navigate Step: 71Navigate Step: 72Navigate Step: 73Navigate Step: 74Navigate Step: 75Navigate Step: 76Navigate Step: 77Navigate Step: 78Navigate Step: 79Navigate Step: 80Navigate Step: 81Navigate Step: 82Navigate Step: 83Navigate Step: 84Navigate Step: 85Navigate Step: 86Navigate Step: 87Navigate Step: 88Navigate Step: 89Navigate Step: 90Navigate Step: 91Navigate Step: 92Navigate Step: 93Navigate Step: 94Navigate Step: 95Navigate Step: 96Navigate Step: 97Navigate Step: 98Navigate Step: 99Navigate Step: 100Navigate Step: 101Navigate Step: 102Navigate Step: 103Navigate Step: 104Navigate Step: 105Navigate Step: 106Navigate Step: 107Navigate Step: 108Navigate Step: 109Navigate Step: 110Navigate Step: 111Navigate Step: 112Navigate Step: 113Navigate Step: 114Navigate Step: 115Navigate Step: 116Navigate Step: 117Navigate Step: 118Navigate Step: 119Navigate Step: 120Navigate Step: 121Navigate Step: 122Navigate Step: 123Navigate Step: 124Navigate Step: 125Navigate Step: 126Navigate Step: 127Navigate Step: 128Navigate Step: 129Navigate Step: 130Navigate Step: 131Navigate Step: 132Navigate Step: 133Navigate Step: 134Navigate Step: 135Navigate Step: 136Navigate Step: 137Navigate Step: 138Navigate Step: 139Navigate Step: 140Navigate Step: 141Navigate Step: 142Navigate Step: 143Navigate Step: 144Navigate Step: 145Navigate Step: 146Navigate Step: 147Navigate Step: 148Navigate Step: 149Navigate Step: 150Navigate Step: 151Navigate Step: 152Navigate Step: 153Navigate Step: 154Navigate Step: 155Navigate Step: 156Navigate Step: 157Navigate Step: 158Navigate Step: 159Navigate Step: 160Navigate Step: 161Navigate Step: 162Navigate Step: 163FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 164Navigate Step: 165Navigate Step: 166Navigate Step: 167Navigate Step: 168Navigate Step: 169Navigate Step: 170Navigate Step: 171Navigate Step: 172FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 173Navigate Step: 174Navigate Step: 175Navigate Step: 176Navigate Step: 177Navigate Step: 178Navigate Step: 179Navigate Step: 180Navigate Step: 181Navigate Step: 182Navigate Step: 183Navigate Step: 184Navigate Step: 185Navigate Step: 186Navigate Step: 187Navigate Step: 188Navigate Step: 189Navigate Step: 190Navigate Step: 191Navigate Step: 192Navigate Step: 193Navigate Step: 194Navigate Step: 195Navigate Step: 196Navigate Step: 197Navigate Step: 198Navigate Step: 199Navigate Step: 200Navigate Step: 201Navigate Step: 202Navigate Step: 203Navigate Step: 204Navigate Step: 205Navigate Step: 206Navigate Step: 207Navigate Step: 208Navigate Step: 209Navigate Step: 210Navigate Step: 211Navigate Step: 212Navigate Step: 213Navigate Step: 214Navigate Step: 215Navigate Step: 216Navigate Step: 217Navigate Step: 218Navigate Step: 219Navigate Step: 220Navigate Step: 221Navigate Step: 222Navigate Step: 223Navigate Step: 224Navigate Step: 225Navigate Step: 226Navigate Step: 227Navigate Step: 228Navigate Step: 229Navigate Step: 230Navigate Step: 231Navigate Step: 232Navigate Step: 233Navigate Step: 234Navigate Step: 235Navigate Step: 236Navigate Step: 237Navigate Step: 238Navigate Step: 239Navigate Step: 240Navigate Step: 241Navigate Step: 242Navigate Step: 243Navigate Step: 244Navigate Step: 245Navigate Step: 246Navigate Step: 247Navigate Step: 248Navigate Step: 249Navigate Step: 250Navigate Step: 251Navigate Step: 252Navigate Step: 253Navigate Step: 254Navigate Step: 255Navigate Step: 256Navigate Step: 257Navigate Step: 258Navigate Step: 259Navigate Step: 260Navigate Step: 261Navigate Step: 262Navigate Step: 263Navigate Step: 264Navigate Step: 265Navigate Step: 266Navigate Step: 267Navigate Step: 268Navigate Step: 269Navigate Step: 270Navigate Step: 271Navigate Step: 272Navigate Step: 273Navigate Step: 274Navigate Step: 275Navigate Step: 276Navigate Step: 277Navigate Step: 278Navigate Step: 279Navigate Step: 280Navigate Step: 281Navigate Step: 282Navigate Step: 283Navigate Step: 284Navigate Step: 285Navigate Step: 286Navigate Step: 287Navigate Step: 288Navigate Step: 289Navigate Step: 290Navigate Step: 291Navigate Step: 292Navigate Step: 293Navigate Step: 294Navigate Step: 295Navigate Step: 296Navigate Step: 297Navigate Step: 298Navigate Step: 299Navigate Step: 300Navigate Step: 301Navigate Step: 302Navigate Step: 303Navigate Step: 304Navigate Step: 305Navigate Step: 306Navigate Step: 307Navigate Step: 308Navigate Step: 309Navigate Step: 310Navigate Step: 311Navigate Step: 312Navigate Step: 313Navigate Step: 314Navigate Step: 315Navigate Step: 316Navigate Step: 317Navigate Step: 318Navigate Step: 319Navigate Step: 320Navigate Step: 321Navigate Step: 322Navigate Step: 323Navigate Step: 324Navigate Step: 325Navigate Step: 326Navigate Step: 327Navigate Step: 328Navigate Step: 329Navigate Step: 330Navigate Step: 331Navigate Step: 332Navigate Step: 333Navigate Step: 334Navigate Step: 335Navigate Step: 336Navigate Step: 337Navigate Step: 338Navigate Step: 339Navigate Step: 340Navigate Step: 341Navigate Step: 342Navigate Step: 343Navigate Step: 344Navigate Step: 345Navigate Step: 346Navigate Step: 347Navigate Step: 348Navigate Step: 349Navigate Step: 350Navigate Step: 351Navigate Step: 352Navigate Step: 353FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 354Navigate Step: 355Navigate Step: 356Navigate Step: 357Navigate Step: 358Navigate Step: 359Navigate Step: 360Navigate Step: 361Navigate Step: 362Navigate Step: 363Navigate Step: 364Navigate Step: 365Navigate Step: 366FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 367Navigate Step: 368Navigate Step: 369Navigate Step: 370Navigate Step: 371Navigate Step: 372Navigate Step: 373Navigate Step: 374Navigate Step: 375Navigate Step: 376Navigate Step: 377Navigate Step: 378Navigate Step: 379Navigate Step: 380Navigate Step: 381Navigate Step: 382Navigate Step: 383Navigate Step: 384Navigate Step: 385Navigate Step: 386Navigate Step: 387Navigate Step: 388Navigate Step: 389Navigate Step: 390Navigate Step: 391Navigate Step: 392Navigate Step: 393Navigate Step: 394Navigate Step: 395Navigate Step: 396Navigate Step: 397Navigate Step: 398Navigate Step: 399Navigate Step: 400Navigate Step: 401Navigate Step: 402Navigate Step: 403Navigate Step: 404Navigate Step: 405Navigate Step: 406Navigate Step: 407Navigate Step: 408Navigate Step: 409Navigate Step: 410Navigate Step: 411Navigate Step: 412Navigate Step: 413Navigate Step: 414Navigate Step: 415Navigate Step: 416Navigate Step: 417Navigate Step: 418Navigate Step: 419Navigate Step: 420Navigate Step: 421Navigate Step: 422Navigate Step: 423Navigate Step: 424Navigate Step: 425Navigate Step: 426Navigate Step: 427Navigate Step: 428Navigate Step: 429Navigate Step: 430Navigate Step: 431Navigate Step: 432Navigate Step: 433Navigate Step: 434Navigate Step: 435Navigate Step: 436Navigate Step: 437Navigate Step: 438Navigate Step: 439Navigate Step: 440Navigate Step: 441Navigate Step: 442Navigate Step: 443Navigate Step: 444Navigate Step: 445Navigate Step: 446Navigate Step: 447Navigate Step: 448Navigate Step: 449Navigate Step: 450Navigate Step: 451Navigate Step: 452Navigate Step: 453Navigate Step: 454Navigate Step: 455Navigate Step: 456Navigate Step: 457Navigate Step: 458Navigate Step: 459Navigate Step: 460Navigate Step: 461Navigate Step: 462Navigate Step: 463Navigate Step: 464Navigate Step: 465Navigate Step: 466Navigate Step: 467Navigate Step: 468Navigate Step: 469Navigate Step: 470Navigate Step: 471Navigate Step: 472Navigate Step: 473Navigate Step: 474Navigate Step: 475Navigate Step: 476Navigate Step: 477[SG-Nav Progress] Episode 2/10 completed | steps=500 | success=0.0 | spl=0.0
+1 {'distance_to_goal': 1.5544450283050537, 'success': 0.0, 'spl': 0.0, 'softspl': 0.02150354838938446}
+2026-08-31 23:26:49,786 distance_to_goal: 0.7823001812212169
+2026-08-31 23:26:49,787 success: 0.5
+2026-08-31 23:26:49,787 spl: 0.33873148001160847
+2026-08-31 23:26:49,787 softspl: 0.34904857713266874
+[SG-Nav Progress] Episode 3/10 started (id=26, goal=cabinet)
+Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 1Navigate Step: 2Navigate Step: 3Navigate Step: 4Navigate Step: 5Navigate Step: 6Navigate Step: 7[SG-Nav Progress] Episode 3/10 completed | steps=25 | success=0.0 | spl=0.0
+2 {'distance_to_goal': 11.249784469604492, 'success': 0.0, 'spl': 0.0, 'softspl': 0.0}
+2026-08-31 23:27:15,667 distance_to_goal: 4.271461610682309
+2026-08-31 23:27:15,668 success: 0.3333333333333333
+2026-08-31 23:27:15,668 spl: 0.22582098667440564
+2026-08-31 23:27:15,668 softspl: 0.23269905142177916
+[SG-Nav Progress] Episode 4/10 started (id=27, goal=cabinet)
+Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 1Navigate Step: 2Navigate Step: 3Navigate Step: 4Navigate Step: 5Navigate Step: 6Navigate Step: 7Navigate Step: 8Navigate Step: 9Navigate Step: 10Navigate Step: 11Navigate Step: 12Navigate Step: 13Navigate Step: 14Navigate Step: 15Navigate Step: 16Navigate Step: 17Navigate Step: 18Navigate Step: 19Navigate Step: 20Navigate Step: 21Navigate Step: 22Navigate Step: 23FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 24Navigate Step: 25Navigate Step: 26Navigate Step: 27Navigate Step: 28Navigate Step: 29Navigate Step: 30Navigate Step: 31Navigate Step: 32Navigate Step: 33Navigate Step: 34Navigate Step: 35Navigate Step: 36Navigate Step: 37Navigate Step: 38Navigate Step: 39Navigate Step: 40Navigate Step: 41Navigate Step: 42Navigate Step: 43Navigate Step: 44Navigate Step: 45Navigate Step: 46Navigate Step: 47Navigate Step: 48Navigate Step: 49Navigate Step: 50Navigate Step: 51Navigate Step: 52Navigate Step: 53[SG-Nav Progress] Episode 4/10 completed | steps=76 | success=1.0 | spl=0.2994028987721563
+3 {'distance_to_goal': 0.0478932149708271, 'success': 1.0, 'spl': 0.2994028987721563, 'softspl': 0.293223129407434}
+2026-08-31 23:31:31,274 distance_to_goal: 3.2155695117544383
+2026-08-31 23:31:31,274 success: 0.5
+2026-08-31 23:31:31,274 spl: 0.2442164646988433
+2026-08-31 23:31:31,274 softspl: 0.24783007091819287
+[SG-Nav Progress] Episode 5/10 started (id=28, goal=cabinet)
+Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 1FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 2Navigate Step: 3Navigate Step: 4Navigate Step: 5Navigate Step: 6Navigate Step: 7Navigate Step: 8Navigate Step: 9Navigate Step: 10Navigate Step: 11Navigate Step: 12Navigate Step: 13Navigate Step: 14Navigate Step: 15Navigate Step: 16Navigate Step: 17[SG-Nav Progress] Episode 5/10 completed | steps=40 | success=0.0 | spl=0.0
+4 {'distance_to_goal': 0.4392992854118347, 'success': 0.0, 'spl': 0.0, 'softspl': 0.8140768313619504}
+2026-08-31 23:43:38,532 distance_to_goal: 2.6603154664859177
+2026-08-31 23:43:38,532 success: 0.4
+2026-08-31 23:43:38,532 spl: 0.19537317175907465
+2026-08-31 23:43:38,532 softspl: 0.3610794230069444
+[SG-Nav Progress] Episode 6/10 started (id=29, goal=cabinet)
+Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 1FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 2Navigate Step: 3Navigate Step: 4Navigate Step: 5Navigate Step: 6Navigate Step: 7Navigate Step: 8Navigate Step: 9Navigate Step: 10Navigate Step: 11Navigate Step: 12Navigate Step: 13Navigate Step: 14Navigate Step: 15Navigate Step: 16Navigate Step: 17Navigate Step: 18Navigate Step: 19Navigate Step: 20Navigate Step: 21Navigate Step: 22Navigate Step: 23Navigate Step: 24Navigate Step: 25Navigate Step: 26Navigate Step: 27Navigate Step: 28Navigate Step: 29Navigate Step: 30Navigate Step: 31Navigate Step: 32Navigate Step: 33Navigate Step: 34Navigate Step: 35Navigate Step: 36Navigate Step: 37FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 38Navigate Step: 39Navigate Step: 40Navigate Step: 41Navigate Step: 42Navigate Step: 43Navigate Step: 44Navigate Step: 45Navigate Step: 46Navigate Step: 47Navigate Step: 48Navigate Step: 49Navigate Step: 50Navigate Step: 51Navigate Step: 52Navigate Step: 53[SG-Nav Progress] Episode 6/10 completed | steps=76 | success=0.0 | spl=0.0
+5 {'distance_to_goal': 5.034121513366699, 'success': 0.0, 'spl': 0.0, 'softspl': 0.0}
+2026-08-31 23:46:06,389 distance_to_goal: 3.0559498076327145
+2026-08-31 23:46:06,389 success: 0.3333333333333333
+2026-08-31 23:46:06,389 spl: 0.16281097646589554
+2026-08-31 23:46:06,389 softspl: 0.30089951917245367
+[SG-Nav Progress] Episode 7/10 started (id=30, goal=cabinet)
+Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 1FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 2Navigate Step: 3Navigate Step: 4Navigate Step: 5Navigate Step: 6Navigate Step: 7Navigate Step: 8Navigate Step: 9Navigate Step: 10Navigate Step: 11Navigate Step: 12Navigate Step: 13Navigate Step: 14Navigate Step: 15Navigate Step: 16FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 17Navigate Step: 18Navigate Step: 19Navigate Step: 20Navigate Step: 21Navigate Step: 22Navigate Step: 23Navigate Step: 24Navigate Step: 25Navigate Step: 26Navigate Step: 27Navigate Step: 28Navigate Step: 29Navigate Step: 30Navigate Step: 31Navigate Step: 32Navigate Step: 33Navigate Step: 34Navigate Step: 35Navigate Step: 36Navigate Step: 37Navigate Step: 38Navigate Step: 39Navigate Step: 40[SG-Nav Progress] Episode 7/10 completed | steps=63 | success=0.0 | spl=0.0
+6 {'distance_to_goal': 5.7201738357543945, 'success': 0.0, 'spl': 0.0, 'softspl': 0.0}
+2026-08-31 23:48:16,281 distance_to_goal: 3.4365532402215258
+2026-08-31 23:48:16,281 success: 0.2857142857142857
+2026-08-31 23:48:16,281 spl: 0.13955226554219619
+2026-08-31 23:48:16,281 softspl: 0.25791387357638884
+[SG-Nav Progress] Episode 8/10 started (id=31, goal=cabinet)
+Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 1Navigate Step: 2Navigate Step: 3Navigate Step: 4[SG-Nav Progress] Episode 8/10 completed | steps=25 | success=0.0 | spl=0.0
+7 {'distance_to_goal': 11.043773651123047, 'success': 0.0, 'spl': 0.0, 'softspl': 0.0}
+2026-08-31 23:48:33,528 distance_to_goal: 4.387455791584216
+2026-08-31 23:48:33,528 success: 0.25
+2026-08-31 23:48:33,528 spl: 0.12210823234942166
+2026-08-31 23:48:33,528 softspl: 0.22567463937934024
+[SG-Nav Progress] Episode 9/10 started (id=32, goal=cabinet)
+Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 1FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 2Navigate Step: 3Navigate Step: 4Navigate Step: 5Navigate Step: 6Navigate Step: 7Navigate Step: 8Navigate Step: 9Navigate Step: 10Navigate Step: 11Navigate Step: 12Navigate Step: 13Navigate Step: 14Navigate Step: 15Navigate Step: 16Navigate Step: 17Navigate Step: 18Navigate Step: 19Navigate Step: 20Navigate Step: 21Navigate Step: 22Navigate Step: 23Navigate Step: 24Navigate Step: 25Navigate Step: 26Navigate Step: 27Navigate Step: 28Navigate Step: 29Navigate Step: 30FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 31Navigate Step: 32Navigate Step: 33Navigate Step: 34Navigate Step: 35Navigate Step: 36Navigate Step: 37Navigate Step: 38Navigate Step: 39Navigate Step: 40Navigate Step: 41Navigate Step: 42Navigate Step: 43Navigate Step: 44Navigate Step: 45Navigate Step: 46Navigate Step: 47Navigate Step: 48Navigate Step: 49Navigate Step: 50Navigate Step: 51Navigate Step: 52Navigate Step: 53Navigate Step: 54Navigate Step: 55Navigate Step: 56Navigate Step: 57Navigate Step: 58Navigate Step: 59Navigate Step: 60Navigate Step: 61Navigate Step: 62Navigate Step: 63Navigate Step: 64Navigate Step: 65Navigate Step: 66Navigate Step: 67Navigate Step: 68Navigate Step: 69Navigate Step: 70Navigate Step: 71Navigate Step: 72Navigate Step: 73Navigate Step: 74Navigate Step: 75Navigate Step: 76Navigate Step: 77Navigate Step: 78Navigate Step: 79Navigate Step: 80Navigate Step: 81Navigate Step: 82Navigate Step: 83Navigate Step: 84Navigate Step: 85Navigate Step: 86Navigate Step: 87Navigate Step: 88Navigate Step: 89Navigate Step: 90Navigate Step: 91Navigate Step: 92Navigate Step: 93Navigate Step: 94Navigate Step: 95Navigate Step: 96Navigate Step: 97Navigate Step: 98FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 99Navigate Step: 100Navigate Step: 101Navigate Step: 102Navigate Step: 103Navigate Step: 104Navigate Step: 105Navigate Step: 106Navigate Step: 107Navigate Step: 108Navigate Step: 109Navigate Step: 110Navigate Step: 111Navigate Step: 112Navigate Step: 113Navigate Step: 114Navigate Step: 115Navigate Step: 116Navigate Step: 117Navigate Step: 118Navigate Step: 119Navigate Step: 120Navigate Step: 121Navigate Step: 122Navigate Step: 123Navigate Step: 124Navigate Step: 125Navigate Step: 126Navigate Step: 127Navigate Step: 128Navigate Step: 129Navigate Step: 130Navigate Step: 131Navigate Step: 132Navigate Step: 133Navigate Step: 134Navigate Step: 135Navigate Step: 136Navigate Step: 137Navigate Step: 138Navigate Step: 139Navigate Step: 140Navigate Step: 141Navigate Step: 142Navigate Step: 143Navigate Step: 144Navigate Step: 145Navigate Step: 146Navigate Step: 147Navigate Step: 148Navigate Step: 149Navigate Step: 150Navigate Step: 151Navigate Step: 152Navigate Step: 153Navigate Step: 154Navigate Step: 155Navigate Step: 156Navigate Step: 157Navigate Step: 158Navigate Step: 159Navigate Step: 160Navigate Step: 161Navigate Step: 162Navigate Step: 163Navigate Step: 164Navigate Step: 165Navigate Step: 166Navigate Step: 167Navigate Step: 168Navigate Step: 169Navigate Step: 170Navigate Step: 171Navigate Step: 172Navigate Step: 173Navigate Step: 174Navigate Step: 175Navigate Step: 176Navigate Step: 177Navigate Step: 178Navigate Step: 179Navigate Step: 180Navigate Step: 181Navigate Step: 182Navigate Step: 183Navigate Step: 184Navigate Step: 185Navigate Step: 186Navigate Step: 187Navigate Step: 188Navigate Step: 189Navigate Step: 190Navigate Step: 191Navigate Step: 192Navigate Step: 193Navigate Step: 194Navigate Step: 195Navigate Step: 196Navigate Step: 197FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 198Navigate Step: 199Navigate Step: 200Navigate Step: 201Navigate Step: 202Navigate Step: 203Navigate Step: 204Navigate Step: 205Navigate Step: 206Navigate Step: 207Navigate Step: 208Navigate Step: 209Navigate Step: 210Navigate Step: 211Navigate Step: 212Navigate Step: 213Navigate Step: 214Navigate Step: 215Navigate Step: 216Navigate Step: 217Navigate Step: 218FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 219Navigate Step: 220Navigate Step: 221Navigate Step: 222Navigate Step: 223Navigate Step: 224Navigate Step: 225Navigate Step: 226Navigate Step: 227Navigate Step: 228Navigate Step: 229Navigate Step: 230Navigate Step: 231Navigate Step: 232Navigate Step: 233Navigate Step: 234Navigate Step: 235Navigate Step: 236Navigate Step: 237Navigate Step: 238Navigate Step: 239Navigate Step: 240Navigate Step: 241Navigate Step: 242Navigate Step: 243Navigate Step: 244Navigate Step: 245Navigate Step: 246Navigate Step: 247Navigate Step: 248Navigate Step: 249Navigate Step: 250Navigate Step: 251Navigate Step: 252Navigate Step: 253Navigate Step: 254Navigate Step: 255Navigate Step: 256Navigate Step: 257Navigate Step: 258Navigate Step: 259FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 260Navigate Step: 261Navigate Step: 262Navigate Step: 263Navigate Step: 264Navigate Step: 265Navigate Step: 266Navigate Step: 267Navigate Step: 268Navigate Step: 269Navigate Step: 270Navigate Step: 271Navigate Step: 272Navigate Step: 273Navigate Step: 274Navigate Step: 275Navigate Step: 276Navigate Step: 277Navigate Step: 278Navigate Step: 279Navigate Step: 280Navigate Step: 281Navigate Step: 282Navigate Step: 283Navigate Step: 284Navigate Step: 285Navigate Step: 286Navigate Step: 287Navigate Step: 288Navigate Step: 289Navigate Step: 290Navigate Step: 291Navigate Step: 292Navigate Step: 293Navigate Step: 294Navigate Step: 295Navigate Step: 296Navigate Step: 297Navigate Step: 298Navigate Step: 299Navigate Step: 300Navigate Step: 301Navigate Step: 302Navigate Step: 303Navigate Step: 304Navigate Step: 305Navigate Step: 306Navigate Step: 307Navigate Step: 308Navigate Step: 309Navigate Step: 310Navigate Step: 311Navigate Step: 312Navigate Step: 313Navigate Step: 314Navigate Step: 315Navigate Step: 316Navigate Step: 317Navigate Step: 318Navigate Step: 319Navigate Step: 320Navigate Step: 321Navigate Step: 322Navigate Step: 323Navigate Step: 324Navigate Step: 325Navigate Step: 326Navigate Step: 327Navigate Step: 328Navigate Step: 329Navigate Step: 330Navigate Step: 331Navigate Step: 332Navigate Step: 333Navigate Step: 334Navigate Step: 335Navigate Step: 336Navigate Step: 337Navigate Step: 338Navigate Step: 339Navigate Step: 340Navigate Step: 341Navigate Step: 342Navigate Step: 343Navigate Step: 344Navigate Step: 345Navigate Step: 346Navigate Step: 347Navigate Step: 348Navigate Step: 349Navigate Step: 350Navigate Step: 351Navigate Step: 352Navigate Step: 353Navigate Step: 354Navigate Step: 355Navigate Step: 356Navigate Step: 357Navigate Step: 358Navigate Step: 359Navigate Step: 360Navigate Step: 361Navigate Step: 362Navigate Step: 363Navigate Step: 364Navigate Step: 365Navigate Step: 366Navigate Step: 367Navigate Step: 368Navigate Step: 369Navigate Step: 370Navigate Step: 371Navigate Step: 372Navigate Step: 373Navigate Step: 374Navigate Step: 375Navigate Step: 376Navigate Step: 377Navigate Step: 378Navigate Step: 379Navigate Step: 380Navigate Step: 381Navigate Step: 382Navigate Step: 383Navigate Step: 384Navigate Step: 385Navigate Step: 386Navigate Step: 387Navigate Step: 388Navigate Step: 389Navigate Step: 390Navigate Step: 391Navigate Step: 392Navigate Step: 393Navigate Step: 394Navigate Step: 395Navigate Step: 396Navigate Step: 397Navigate Step: 398FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 399Navigate Step: 400Navigate Step: 401Navigate Step: 402Navigate Step: 403Navigate Step: 404Navigate Step: 405Navigate Step: 406Navigate Step: 407Navigate Step: 408Navigate Step: 409Navigate Step: 410Navigate Step: 411Navigate Step: 412Navigate Step: 413Navigate Step: 414Navigate Step: 415Navigate Step: 416Navigate Step: 417Navigate Step: 418Navigate Step: 419Navigate Step: 420Navigate Step: 421Navigate Step: 422Navigate Step: 423Navigate Step: 424Navigate Step: 425Navigate Step: 426Navigate Step: 427Navigate Step: 428Navigate Step: 429Navigate Step: 430Navigate Step: 431Navigate Step: 432Navigate Step: 433Navigate Step: 434Navigate Step: 435Navigate Step: 436Navigate Step: 437Navigate Step: 438Navigate Step: 439Navigate Step: 440Navigate Step: 441Navigate Step: 442Navigate Step: 443Navigate Step: 444Navigate Step: 445Navigate Step: 446Navigate Step: 447Navigate Step: 448Navigate Step: 449Navigate Step: 450Navigate Step: 451Navigate Step: 452Navigate Step: 453Navigate Step: 454Navigate Step: 455Navigate Step: 456Navigate Step: 457Navigate Step: 458Navigate Step: 459Navigate Step: 460Navigate Step: 461Navigate Step: 462Navigate Step: 463Navigate Step: 464Navigate Step: 465Navigate Step: 466Navigate Step: 467Navigate Step: 468Navigate Step: 469Navigate Step: 470Navigate Step: 471Navigate Step: 472Navigate Step: 473Navigate Step: 474Navigate Step: 475Navigate Step: 476Navigate Step: 477[SG-Nav Progress] Episode 9/10 completed | steps=500 | success=0.0 | spl=0.0
+8 {'distance_to_goal': 6.78099250793457, 'success': 0.0, 'spl': 0.0, 'softspl': 0.12442214497061499}
+2026-09-01 01:44:56,208 distance_to_goal: 4.653404315623145
+2026-09-01 01:44:56,208 success: 0.2222222222222222
+2026-09-01 01:44:56,208 spl: 0.10854065097726369
+2026-09-01 01:44:56,208 softspl: 0.21442436222281522
+[SG-Nav Progress] Episode 10/10 started (id=33, goal=cabinet)
+Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 1FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 2Navigate Step: 3Navigate Step: 4Navigate Step: 5Navigate Step: 6Navigate Step: 7Navigate Step: 8Navigate Step: 9Navigate Step: 10Navigate Step: 11Navigate Step: 12Navigate Step: 13Navigate Step: 14Navigate Step: 15Navigate Step: 16Navigate Step: 17Navigate Step: 18FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 19Navigate Step: 20Navigate Step: 21Navigate Step: 22Navigate Step: 23Navigate Step: 24Navigate Step: 25Navigate Step: 26FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 27Navigate Step: 28Navigate Step: 29Navigate Step: 30Navigate Step: 31Navigate Step: 32Navigate Step: 33Navigate Step: 34Navigate Step: 35Navigate Step: 36Navigate Step: 37Navigate Step: 38Navigate Step: 39Navigate Step: 40Navigate Step: 41Navigate Step: 42Navigate Step: 43Navigate Step: 44FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 45Navigate Step: 46Navigate Step: 47Navigate Step: 48Navigate Step: 49Navigate Step: 50Navigate Step: 51Navigate Step: 52Navigate Step: 53Navigate Step: 54Navigate Step: 55Navigate Step: 56Navigate Step: 57Navigate Step: 58FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 59Navigate Step: 60Navigate Step: 61Navigate Step: 62Navigate Step: 63Navigate Step: 64Navigate Step: 65Navigate Step: 66Navigate Step: 67Navigate Step: 68Navigate Step: 69FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 70Navigate Step: 71Navigate Step: 72Navigate Step: 73Navigate Step: 74Navigate Step: 75Navigate Step: 76Navigate Step: 77Navigate Step: 78Navigate Step: 79Navigate Step: 80Navigate Step: 81Navigate Step: 82Navigate Step: 83Navigate Step: 84Navigate Step: 85Navigate Step: 86Navigate Step: 87Navigate Step: 88Navigate Step: 89Navigate Step: 90Navigate Step: 91Navigate Step: 92Navigate Step: 93Navigate Step: 94Navigate Step: 95Navigate Step: 96Navigate Step: 97Navigate Step: 98Navigate Step: 99Navigate Step: 100Navigate Step: 101Navigate Step: 102Navigate Step: 103Navigate Step: 104Navigate Step: 105Navigate Step: 106Navigate Step: 107Navigate Step: 108Navigate Step: 109Navigate Step: 110Navigate Step: 111Navigate Step: 112Navigate Step: 113Navigate Step: 114Navigate Step: 115Navigate Step: 116Navigate Step: 117Navigate Step: 118Navigate Step: 119Navigate Step: 120Navigate Step: 121Navigate Step: 122Navigate Step: 123Navigate Step: 124Navigate Step: 125Navigate Step: 126Navigate Step: 127Navigate Step: 128Navigate Step: 129Navigate Step: 130Navigate Step: 131Navigate Step: 132Navigate Step: 133Navigate Step: 134[SG-Nav Progress] Episode 10/10 completed | steps=157 | success=1.0 | spl=0.18140202575093559
+9 {'distance_to_goal': 0.04105791822075844, 'success': 1.0, 'spl': 0.18140202575093559, 'softspl': 0.1792344770548308}
+2026-09-01 02:41:18,728 distance_to_goal: 4.192169675882906
+2026-09-01 02:41:18,728 success: 0.3
+2026-09-01 02:41:18,728 spl: 0.11582678845463087
+2026-09-01 02:41:18,728 softspl: 0.21090537370601678
+2026-09-01 02:41:18,730 distance_to_goal: 4.192169675882906
+2026-09-01 02:41:18,730 success: 0.3
+2026-09-01 02:41:18,730 spl: 0.11582678845463087
+2026-09-01 02:41:18,730 softspl: 0.21090537370601678
+[02:41:19:057163]:[Physics] PhysicsManager.cpp(54)::~PhysicsManager : Deconstructing PhysicsManager
+[02:41:19:057274]:[Scene] SceneManager.h(21)::~SceneManager : Deconstructing SceneManager
+[02:41:19:057281]:[Scene] SceneGraph.h(25)::~SceneGraph : Deconstructing SceneGraph
+[02:41:19:058702]:[Sensor] Sensor.cpp(69)::~Sensor : Deconstructing Sensor
+[02:41:19:059007]:[Sensor] Sensor.cpp(69)::~Sensor : Deconstructing Sensor
+[02:41:19:059212]:[Scene] SemanticScene.h(48)::~SemanticScene : Deconstructing SemanticScene
+[02:41:19:074730]:[Gfx] Renderer.cpp(71)::~Impl : Deconstructing Renderer
+[02:41:19:074754]:[Gfx] WindowlessContext.h(17)::~WindowlessContext : Deconstructing WindowlessContext
+[02:41:19:184441]:[Sim] Simulator.cpp(69)::~Simulator : Deconstructing Simulator

@@ -1,0 +1,290 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+VISION BACKBONE USE GRADIENT CHECKPOINTING:  False
+UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+LANGUAGE BACKBONE USE GRADIENT CHECKPOINTING:  False
+Some weights of the model checkpoint at /mnt/d/Habitat/models/bert-base-uncased were not used when initializing BertModel: ['bert.pooler.dense.weight', 'bert.pooler.dense.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.bias', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.weight', 'cls.predictions.transform.dense.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+EARLY FUSION ON, USING MHA-B
+EARLY FUSION ON, USING MHA-B
+EARLY FUSION ON, USING MHA-B
+EARLY FUSION ON, USING MHA-B
+EARLY FUSION ON, USING MHA-B
+EARLY FUSION ON, USING MHA-B
+EARLY FUSION ON, USING MHA-B
+EARLY FUSION ON, USING MHA-B
+final text_encoder_type: /mnt/d/Habitat/models/bert-base-uncased
+Some weights of the model checkpoint at /mnt/d/Habitat/models/bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+_IncompatibleKeys(missing_keys=[], unexpected_keys=['label_enc.weight'])
+scene graph module init finish!!!
+2026-09-02 09:24:52,519 Initializing dataset ObjectNav-v1
+2026-09-02 09:24:52,975 initializing sim Sim-v0
+[09:24:52:980416]:[Metadata] AttributesManagerBase.h(380)::createFromJsonOrDefaultInternal : <Dataset>: Proposing JSON name : default.scene_dataset_config.json from original name : default| This file does not exist.
+[09:24:52:980516]:[Metadata] AssetAttributesManager.cpp(123)::createObject : Asset attributes (capsule3DSolid:capsule3DSolid_hemiRings_4_cylRings_1_segments_12_halfLen_0.75_useTexCoords_false_useTangents_false) created and registered.
+[09:24:52:980540]:[Metadata] AssetAttributesManager.cpp(123)::createObject : Asset attributes (capsule3DWireframe:capsule3DWireframe_hemiRings_8_cylRings_1_segments_16_halfLen_1) created and registered.
+[09:24:52:980557]:[Metadata] AssetAttributesManager.cpp(123)::createObject : Asset attributes (coneSolid:coneSolid_segments_12_halfLen_1.25_rings_1_useTexCoords_false_useTangents_false_capEnd_true) created and registered.
+[09:24:52:980572]:[Metadata] AssetAttributesManager.cpp(123)::createObject : Asset attributes (coneWireframe:coneWireframe_segments_32_halfLen_1.25) created and registered.
+[09:24:52:980582]:[Metadata] AssetAttributesManager.cpp(123)::createObject : Asset attributes (cubeSolid:cubeSolid) created and registered.
+[09:24:52:980593]:[Metadata] AssetAttributesManager.cpp(123)::createObject : Asset attributes (cubeWireframe:cubeWireframe) created and registered.
+[09:24:52:980606]:[Metadata] AssetAttributesManager.cpp(123)::createObject : Asset attributes (cylinderSolid:cylinderSolid_rings_1_segments_12_halfLen_1_useTexCoords_false_useTangents_false_capEnds_true) created and registered.
+[09:24:52:980615]:[Metadata] AssetAttributesManager.cpp(123)::createObject : Asset attributes (cylinderWireframe:cylinderWireframe_rings_1_segments_32_halfLen_1) created and registered.
+[09:24:52:980625]:[Metadata] AssetAttributesManager.cpp(123)::createObject : Asset attributes (icosphereSolid:icosphereSolid_subdivs_1) created and registered.
+[09:24:52:980634]:[Metadata] AssetAttributesManager.cpp(123)::createObject : Asset attributes (icosphereWireframe:icosphereWireframe_subdivs_1) created and registered.
+[09:24:52:980646]:[Metadata] AssetAttributesManager.cpp(123)::createObject : Asset attributes (uvSphereSolid:uvSphereSolid_rings_8_segments_16_useTexCoords_false_useTangents_false) created and registered.
+[09:24:52:980656]:[Metadata] AssetAttributesManager.cpp(123)::createObject : Asset attributes (uvSphereWireframe:uvSphereWireframe_rings_16_segments_32) created and registered.
+[09:24:52:980662]:[Metadata] AssetAttributesManager.cpp(112)::AssetAttributesManager : Built default primitive asset templates : 12
+[09:24:52:980811]:[Metadata] SceneDatasetAttributesManager.cpp(37)::createObject : File (default) not found, so new default dataset attributes created  and registered.
+[09:24:52:980817]:[Metadata] MetadataMediator.cpp(120)::createSceneDataset : Dataset default successfully created.
+[09:24:52:980827]:[Metadata] AttributesManagerBase.h(380)::createFromJsonOrDefaultInternal : <Physics Manager>: Proposing JSON name : ./data/default.physics_config.json from original name : ./data/default.physics_config.json| This file does not exist.
+[09:24:52:980845]:[Metadata] PhysicsAttributesManager.cpp(26)::createObject : File (./data/default.physics_config.json) not found, so new default physics manager attributes created and registered.
+[09:24:52:980850]:[Metadata] MetadataMediator.cpp(203)::setActiveSceneDatasetName : Previous active dataset  changed to default successfully.
+[09:24:52:980855]:[Metadata] MetadataMediator.cpp(175)::setCurrPhysicsAttributesHandle : Old physics manager attributes  changed to ./data/default.physics_config.json successfully.
+[09:24:52:980861]:[Metadata] MetadataMediator.cpp(66)::setSimulatorConfiguration : Set new simulator config for scene/stage : data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb and dataset : default which is currently active dataset.
+Renderer: NVIDIA GeForce RTX 4090 D/PCIe/SSE2 by NVIDIA Corporation
+OpenGL version: 4.6.0 NVIDIA 580.105.08
+Using optional features:
+    GL_ARB_vertex_array_object
+    GL_ARB_separate_shader_objects
+    GL_ARB_robustness
+    GL_ARB_texture_storage
+    GL_ARB_texture_view
+    GL_ARB_framebuffer_no_attachments
+    GL_ARB_invalidate_subdata
+    GL_ARB_texture_storage_multisample
+    GL_ARB_multi_bind
+    GL_ARB_direct_state_access
+    GL_ARB_get_texture_sub_image
+    GL_ARB_texture_filter_anisotropic
+    GL_KHR_debug
+    GL_KHR_parallel_shader_compile
+    GL_NV_depth_buffer_float
+Using driver workarounds:
+    no-forward-compatible-core-context
+    nv-egl-incorrect-gl11-function-pointers
+    no-layout-qualifiers-on-old-glsl
+    nv-zero-context-profile-mask
+    nv-implementation-color-read-format-dsa-broken
+    nv-cubemap-inconsistent-compressed-image-size
+    nv-cubemap-broken-full-compressed-image-query
+    nv-compressed-block-size-in-bits
+[09:24:53:079946]:[Metadata] MetadataMediator.cpp(297)::getSceneInstanceAttributesByName : Dataset : default has no preloaded SceneInstanceAttributes or StageAttributes named : data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb so loading/creating a new StageAttributes with this name, and then creating a SceneInstanceAttributes with the same name that references this stage.
+[09:24:53:079965]:[Metadata] AttributesManagerBase.h(380)::createFromJsonOrDefaultInternal : <Stage Template>: Proposing JSON name : data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.stage_config.json from original name : data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb| This file does not exist.
+[09:24:53:080021]:[Metadata] AbstractObjectAttributesManagerBase.h(184)::createObject : File (data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb) exists but is not a recognized config filename extension, so new default Stage Template attributes created and registered.
+[09:24:53:080054]:[Metadata] SceneDatasetAttributes.cpp(47)::addNewSceneInstanceToDataset : Dataset : 'default' : Stage Attributes 'data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb' specified in Scene Attributes exists in dataset library.
+[09:24:53:080060]:[Metadata] SceneDatasetAttributes.cpp(84)::addNewSceneInstanceToDataset : Dataset : 'default' : Lighting Layout Attributes 'no_lights' specified in Scene Attributes but does not exist in dataset, so creating.
+[09:24:53:080067]:[Metadata] AttributesManagerBase.h(380)::createFromJsonOrDefaultInternal : <Lighting Layout>: Proposing JSON name : no_lights.lighting_config.json from original name : no_lights| This file does not exist.
+[09:24:53:080080]:[Metadata] LightLayoutAttributesManager.cpp(38)::createObject : File (no_lights) not found, so new default light layout attributes created and registered.
+[09:24:53:080088]:[Sim] Simulator.cpp(235)::createSceneInstance : Navmesh file location in scene instance : 
+[09:24:53:080099]:[Sim] Simulator.cpp(244)::createSceneInstance : Navmesh file not found, checked at filename : ''
+[09:24:53:080117]:[Scene] SceneGraph.h(85)::createDrawableGroup : Created DrawableGroup: 
+[09:24:53:080123]:[Assets] ResourceManager.cpp(308)::loadSemanticSceneDescriptor : SceneInstance : data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb proposed Semantic Scene Descriptor filename : data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.scn
+[09:24:53:080132]:[Assets] ResourceManager.cpp(355)::loadSemanticSceneDescriptor : SSD File Naming Issue! Neither SceneInstanceAttributes-provided name : data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.scn  nor constructed filename : data/MatterPort3D/mp3d/2azQ1b91cZZ/info_semantic.json exist on disk.
+[09:24:53:080149]:[Assets] ResourceManager.cpp(1666)::configureImporterManagerGLExtensions : Importing Basis files as BC7.
+[09:24:53:080315]:[Sim] Simulator.cpp(309)::createSceneInstance : Using scene instance-specified Light key : - no_lights -
+[09:24:53:080322]:[Metadata] MetadataMediator.cpp(66)::setSimulatorConfiguration : Set new simulator config for scene/stage : data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb and dataset : default which is currently active dataset.
+[09:24:53:080338]:[Sim] Simulator.cpp(419)::instanceStageForSceneAttributes : Start to load stage named : data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb with render asset : data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb and collision asset : data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb
+[09:24:53:080377]:[Assets] ResourceManager.cpp(702)::createStageAssetInfosFromAttributes : Frame :{"up":[0,0,1],"front":[0,1,0],"origin":[0,0,0]} for render mesh named : data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb|{"up":[0,0,1],"front":[0,1,0],"origin":[0,0,0]} for semantic mesh named :  with type specified as semantic|Semantic Txtrs : False
+[09:24:53:080383]:[Assets] ResourceManager.cpp(518)::loadStage : Start load render asset data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb .
+[09:24:53:080389]:[Assets] ResourceManager.cpp(984)::loadStageInternal : Attempting to load stage data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb 
+[09:24:53:080394]:[Assets] ResourceManager.cpp(866)::loadRenderAsset : Loading general asset named: data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb
+[09:24:53:080397]:[Assets] ResourceManager.cpp(1666)::configureImporterManagerGLExtensions : Importing Basis files as BC7.
+[09:24:56:973095]:[Assets] ResourceManager.cpp(2105)::loadMaterials : Building 134 materials for asset named '2azQ1b91cZZ.glb' : 
+[09:24:56:973184]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 00:Flat.
+[09:24:56:973197]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 01:Flat.
+[09:24:56:973206]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 02:Flat.
+[09:24:56:973213]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 03:Flat.
+[09:24:56:973220]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 04:Flat.
+[09:24:56:973229]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 05:Flat.
+[09:24:56:973236]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 06:Flat.
+[09:24:56:973244]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 07:Flat.
+[09:24:56:973251]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 08:Flat.
+[09:24:56:973258]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 09:Flat.
+[09:24:56:973266]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 10:Flat.
+[09:24:56:973275]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 11:Flat.
+[09:24:56:973282]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 12:Flat.
+[09:24:56:973288]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 13:Flat.
+[09:24:56:973295]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 14:Flat.
+[09:24:56:973302]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 15:Flat.
+[09:24:56:973309]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 16:Flat.
+[09:24:56:973316]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 17:Flat.
+[09:24:56:973323]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 18:Flat.
+[09:24:56:973330]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 19:Flat.
+[09:24:56:973338]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 20:Flat.
+[09:24:56:973345]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 21:Flat.
+[09:24:56:973352]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 22:Flat.
+[09:24:56:973359]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 23:Flat.
+[09:24:56:973366]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 24:Flat.
+[09:24:56:973373]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 25:Flat.
+[09:24:56:973379]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 26:Flat.
+[09:24:56:973386]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 27:Flat.
+[09:24:56:973394]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 28:Flat.
+[09:24:56:973400]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 29:Flat.
+[09:24:56:973407]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 30:Flat.
+[09:24:56:973413]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 31:Flat.
+[09:24:56:973421]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 32:Flat.
+[09:24:56:973429]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 33:Flat.
+[09:24:56:973436]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 34:Flat.
+[09:24:56:973443]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 35:Flat.
+[09:24:56:973452]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 36:Flat.
+[09:24:56:973459]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 37:Flat.
+[09:24:56:973468]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 38:Flat.
+[09:24:56:973476]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 39:Flat.
+[09:24:56:973483]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 40:Flat.
+[09:24:56:973490]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 41:Flat.
+[09:24:56:973497]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 42:Flat.
+[09:24:56:973504]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 43:Flat.
+[09:24:56:973511]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 44:Flat.
+[09:24:56:973518]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 45:Flat.
+[09:24:56:973524]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 46:Flat.
+[09:24:56:973531]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 47:Flat.
+[09:24:56:973539]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 48:Flat.
+[09:24:56:973546]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 49:Flat.
+[09:24:56:973554]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 50:Flat.
+[09:24:56:973560]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 51:Flat.
+[09:24:56:973567]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 52:Flat.
+[09:24:56:973574]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 53:Flat.
+[09:24:56:973581]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 54:Flat.
+[09:24:56:973588]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 55:Flat.
+[09:24:56:973595]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 56:Flat.
+[09:24:56:973602]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 57:Flat.
+[09:24:56:973609]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 58:Flat.
+[09:24:56:973616]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 59:Flat.
+[09:24:56:973623]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 60:Flat.
+[09:24:56:973629]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 61:Flat.
+[09:24:56:973636]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 62:Flat.
+[09:24:56:973643]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 63:Flat.
+[09:24:56:973650]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 64:Flat.
+[09:24:56:973658]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 65:Flat.
+[09:24:56:973664]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 66:Flat.
+[09:24:56:973671]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 67:Flat.
+[09:24:56:973678]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 68:Flat.
+[09:24:56:973685]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 69:Flat.
+[09:24:56:973692]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 70:Flat.
+[09:24:56:973699]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 71:Flat.
+[09:24:56:973706]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 72:Flat.
+[09:24:56:973715]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 73:Flat.
+[09:24:56:973723]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 74:Flat.
+[09:24:56:973731]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 75:Flat.
+[09:24:56:973738]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 76:Flat.
+[09:24:56:973745]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 77:Flat.
+[09:24:56:973752]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 78:Flat.
+[09:24:56:973758]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 79:Flat.
+[09:24:56:973767]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 80:Flat.
+[09:24:56:973773]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 81:Flat.
+[09:24:56:973780]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 82:Flat.
+[09:24:56:973787]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 83:Flat.
+[09:24:56:973794]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 84:Flat.
+[09:24:56:973800]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 85:Flat.
+[09:24:56:973807]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 86:Flat.
+[09:24:56:973814]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 87:Flat.
+[09:24:56:973821]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 88:Flat.
+[09:24:56:973828]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 89:Flat.
+[09:24:56:973835]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 90:Flat.
+[09:24:56:973841]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 91:Flat.
+[09:24:56:973849]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 92:Flat.
+[09:24:56:973855]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 93:Flat.
+[09:24:56:973864]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 94:Flat.
+[09:24:56:973872]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 95:Flat.
+[09:24:56:973879]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 96:Flat.
+[09:24:56:973886]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 97:Flat.
+[09:24:56:973893]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 98:Flat.
+[09:24:56:973899]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 99:Flat.
+[09:24:56:973906]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 100:Flat.
+[09:24:56:973913]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 101:Flat.
+[09:24:56:973920]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 102:Flat.
+[09:24:56:973926]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 103:Flat.
+[09:24:56:973933]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 104:Flat.
+[09:24:56:973939]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 105:Flat.
+[09:24:56:973946]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 106:Flat.
+[09:24:56:973953]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 107:Flat.
+[09:24:56:973959]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 108:Flat.
+[09:24:56:973967]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 109:Flat.
+[09:24:56:973974]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 110:Flat.
+[09:24:56:973980]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 111:Flat.
+[09:24:56:973987]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 112:Flat.
+[09:24:56:973994]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 113:Flat.
+[09:24:56:974000]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 114:Flat.
+[09:24:56:974007]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 115:Flat.
+[09:24:56:974013]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 116:Flat.
+[09:24:56:974020]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 117:Flat.
+[09:24:56:974028]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 118:Flat.
+[09:24:56:974034]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 119:Flat.
+[09:24:56:974041]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 120:Flat.
+[09:24:56:974048]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 121:Flat.
+[09:24:56:974054]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 122:Flat.
+[09:24:56:974061]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 123:Flat.
+[09:24:56:974068]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 124:Flat.
+[09:24:56:974078]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 125:Flat.
+[09:24:56:974085]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 126:Flat.
+[09:24:56:974092]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 127:Flat.
+[09:24:56:974099]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 128:Flat.
+[09:24:56:974106]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 129:Flat.
+[09:24:56:974113]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 130:Flat.
+[09:24:56:974120]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 131:Flat.
+[09:24:56:974126]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 132:Flat.
+[09:24:56:974133]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 133:Flat.
+[09:24:57:172461]:[Sim] Simulator.cpp(446)::instanceStageForSceneAttributes : Successfully loaded stage named : data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb
+[09:24:57:172485]:[Sim] Simulator.cpp(478)::instanceStageForSceneAttributes : 
+---
+The active scene does not contain semantic annotations : activeSemanticSceneID_ = 0  
+---
+[09:24:57:172538]:[Sim] Simulator.cpp(203)::reconfigure : CreateSceneInstance success == true for active scene name : data/MatterPort3D/mp3d/2azQ1b91cZZ/2azQ1b91cZZ.glb  with renderer.
+[09:24:57:180503]:[Nav] PathFinder.cpp(571)::build : Building navmesh with 862 x 508 cells
+[09:24:57:355754]:[Nav] PathFinder.cpp(845)::build : Created navmesh with 1339 vertices 682 polygons
+[09:24:57:355803]:[Sim] Simulator.cpp(908)::recomputeNavMesh : reconstruct navmesh successful
+2026-09-02 09:24:57,357 Initializing task ObjectNav-v1
+[SG-Nav Selection] episode indexes [115:116) ids=['115']
+1
+[SG-Nav Progress] Episode 1/1 started (id=115, goal=cushion)
+Navigate Step: 0FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 0Navigate Step: 1Navigate Step: 2Navigate Step: 3Navigate Step: 4Navigate Step: 5Navigate Step: 6Navigate Step: 7Navigate Step: 8Navigate Step: 9Navigate Step: 10Navigate Step: 11Navigate Step: 12Navigate Step: 13Navigate Step: 14Navigate Step: 15Navigate Step: 16Navigate Step: 17Navigate Step: 18FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 19Navigate Step: 20Navigate Step: 21Navigate Step: 22Navigate Step: 23Navigate Step: 24Navigate Step: 25Navigate Step: 26Navigate Step: 27Navigate Step: 28Navigate Step: 29Navigate Step: 30Navigate Step: 31Navigate Step: 32Navigate Step: 33FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 34Navigate Step: 35Navigate Step: 36Navigate Step: 37Navigate Step: 38Navigate Step: 39Navigate Step: 40Navigate Step: 41Navigate Step: 42Navigate Step: 43Navigate Step: 44FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 45Navigate Step: 46Navigate Step: 47Navigate Step: 48Navigate Step: 49Navigate Step: 50Navigate Step: 51Navigate Step: 52Navigate Step: 53Navigate Step: 54Navigate Step: 55Navigate Step: 56Navigate Step: 57Navigate Step: 58Navigate Step: 59Navigate Step: 60Navigate Step: 61Navigate Step: 62Navigate Step: 63Navigate Step: 64Navigate Step: 65Navigate Step: 66Navigate Step: 67Navigate Step: 68Navigate Step: 69Navigate Step: 70Navigate Step: 71Navigate Step: 72FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 73Navigate Step: 74Navigate Step: 75Navigate Step: 76Navigate Step: 77Navigate Step: 78Navigate Step: 79Navigate Step: 80Navigate Step: 81Navigate Step: 82Navigate Step: 83FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 84Navigate Step: 85Navigate Step: 86Navigate Step: 87Navigate Step: 88Navigate Step: 89Navigate Step: 90Navigate Step: 91Navigate Step: 92Navigate Step: 93Navigate Step: 94Navigate Step: 95Navigate Step: 96Navigate Step: 97Navigate Step: 98Navigate Step: 99Navigate Step: 100Navigate Step: 101Navigate Step: 102Navigate Step: 103Navigate Step: 104Navigate Step: 105Navigate Step: 106Navigate Step: 107Navigate Step: 108Navigate Step: 109Navigate Step: 110Navigate Step: 111Navigate Step: 112Navigate Step: 113Navigate Step: 114Navigate Step: 115Navigate Step: 116Navigate Step: 117Navigate Step: 118Navigate Step: 119Navigate Step: 120Navigate Step: 121Navigate Step: 122Navigate Step: 123Navigate Step: 124Navigate Step: 125Navigate Step: 126Navigate Step: 127Navigate Step: 128Navigate Step: 129Navigate Step: 130Navigate Step: 131Navigate Step: 132Navigate Step: 133Navigate Step: 134Navigate Step: 135Navigate Step: 136Navigate Step: 137Navigate Step: 138Navigate Step: 139Navigate Step: 140Navigate Step: 141Navigate Step: 142Navigate Step: 143Navigate Step: 144Navigate Step: 145Navigate Step: 146Navigate Step: 147Navigate Step: 148Navigate Step: 149Navigate Step: 150Navigate Step: 151Navigate Step: 152Navigate Step: 153Navigate Step: 154Navigate Step: 155Navigate Step: 156Navigate Step: 157Navigate Step: 158Navigate Step: 159Navigate Step: 160Navigate Step: 161Navigate Step: 162Navigate Step: 163Navigate Step: 164Navigate Step: 165Navigate Step: 166Navigate Step: 167Navigate Step: 168Navigate Step: 169Navigate Step: 170Navigate Step: 171Navigate Step: 172Navigate Step: 173Navigate Step: 174Navigate Step: 175Navigate Step: 176Navigate Step: 177Navigate Step: 178Navigate Step: 179Navigate Step: 180Navigate Step: 181Navigate Step: 182Navigate Step: 183Navigate Step: 184Navigate Step: 185Navigate Step: 186Navigate Step: 187Navigate Step: 188Navigate Step: 189Navigate Step: 190Navigate Step: 191Navigate Step: 192Navigate Step: 193Navigate Step: 194Navigate Step: 195Navigate Step: 196Navigate Step: 197Navigate Step: 198Navigate Step: 199Navigate Step: 200Navigate Step: 201Navigate Step: 202Navigate Step: 203Navigate Step: 204Navigate Step: 205Navigate Step: 206Navigate Step: 207Navigate Step: 208Navigate Step: 209Navigate Step: 210FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+UserWarning: nn.functional.upsample_bilinear is deprecated. Use nn.functional.interpolate instead.
+Navigate Step: 211Navigate Step: 212Navigate Step: 213Navigate Step: 214Navigate Step: 215Navigate Step: 216Navigate Step: 217Navigate Step: 218Navigate Step: 219Navigate Step: 220Navigate Step: 221Navigate Step: 222Navigate Step: 223Navigate Step: 224Navigate Step: 225Navigate Step: 226Navigate Step: 227Navigate Step: 228Navigate Step: 229Navigate Step: 230Navigate Step: 231Navigate Step: 232Navigate Step: 233Navigate Step: 234Navigate Step: 235Navigate Step: 236Navigate Step: 237Navigate Step: 238Navigate Step: 239Navigate Step: 240[SG-Nav Progress] Episode 1/1 completed | steps=263 | success=0.0 | spl=0.0
+0 {'distance_to_goal': 0.7384916543960571, 'success': 0.0, 'spl': 0.0, 'softspl': 0.46702925962067704}
+2026-09-02 09:34:20,807 distance_to_goal: 0.7384916543960571
+2026-09-02 09:34:20,808 success: 0.0
+2026-09-02 09:34:20,808 spl: 0.0
+2026-09-02 09:34:20,808 softspl: 0.46702925962067704
+2026-09-02 09:34:20,809 distance_to_goal: 0.7384916543960571
+2026-09-02 09:34:20,809 success: 0.0
+2026-09-02 09:34:20,809 spl: 0.0
+2026-09-02 09:34:20,809 softspl: 0.46702925962067704
+[09:34:21:332150]:[Physics] PhysicsManager.cpp(54)::~PhysicsManager : Deconstructing PhysicsManager
+[09:34:21:332415]:[Scene] SceneManager.h(21)::~SceneManager : Deconstructing SceneManager
+[09:34:21:332471]:[Scene] SceneGraph.h(25)::~SceneGraph : Deconstructing SceneGraph
+[09:34:21:334336]:[Sensor] Sensor.cpp(69)::~Sensor : Deconstructing Sensor
+[09:34:21:335148]:[Sensor] Sensor.cpp(69)::~Sensor : Deconstructing Sensor
+[09:34:21:335375]:[Scene] SemanticScene.h(48)::~SemanticScene : Deconstructing SemanticScene
+[09:34:21:360460]:[Gfx] Renderer.cpp(71)::~Impl : Deconstructing Renderer
+[09:34:21:360486]:[Gfx] WindowlessContext.h(17)::~WindowlessContext : Deconstructing WindowlessContext
+[09:34:21:480778]:[Sim] Simulator.cpp(69)::~Simulator : Deconstructing Simulator
