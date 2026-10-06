@@ -1,156 +1,208 @@
-# SG-Nav MP3D Reproduction
+# SG-Nav MP3D Reproduction and Result Audit
 
-This repository documents an MP3D ObjectNav reproduction attempt based on [bagh2178/SG-Nav](https://github.com/bagh2178/SG-Nav). It archives the cloud source snapshot, compatibility and visualization code, runtime patches, raw logs, Habitat metrics, and visualization videos.
+This repository documents an MP3D ObjectNav reproduction of [SG-Nav](https://github.com/bagh2178/SG-Nav), including an upstream source snapshot, compatibility patches, visualization extensions, environment records, raw logs, Habitat metrics, and videos. The corresponding NeurIPS 2024 paper is [SG-Nav: Online 3D Scene Graph Prompting for LLM-based Zero-shot Object Navigation](https://proceedings.neurips.cc/paper_files/paper/2024/hash/098491b37deebbe6c007e69815729e09-Abstract-Conference.html).
 
-> **Status as of 2026-09-19:** Outputs for 199 of the 200 selected episode indices are archived. Episode `5` was interrupted and remains excluded. The aggregate below covers the separately run **194-episode original-visual cohort (`6–199`)**, not all 200 selected episodes and not the full MP3D validation split.
+> **Audit conclusion (2026-10-06):** The engineering reproduction runs successfully and provides traceable artifacts for a single-scene experiment. It is not yet a strict reproduction of the paper's full MP3D validation benchmark. The aggregate covers 199 completed episodes from scene `2azQ1b91cZZ`, and the LLM/VLM, software environment, and execution protocol differ from those reported in the paper.
 
-## Experiment scope
+## Bottom line
 
-- Dataset: Matterport3D ObjectNav validation
-- Selected scene slice: `[0:1]` (`--split_l 0 --split_r 1`)
-- Scene: `2azQ1b91cZZ`
-- Selected episode indices: `0` through `199` (200 episodes)
-- Goal category: varies by episode
-- Success distance: `0.2 m`
-- Habitat-Lab: `0.2.1`
-- Habitat-Sim: `0.2.4`
-- GPU: NVIDIA GeForce RTX 4090 D
+| Level | Conclusion |
+| --- | --- |
+| Execution and artifact archival | **Successful:** all 199 completed episodes have one completed metric record and a corresponding video |
+| Single-scene navigation quality | **Partially reaches the paper's range:** SR is `35.18%`, versus `40.1%` for SG-Nav-LLaMA in the paper |
+| Path efficiency | **A clear gap remains:** SPL is `12.61%` and SoftSPL is `19.04%` |
+| Full-paper reproduction | **Not established:** only 1/11 scenes and 199/2195 validation episodes were evaluated, with a different model configuration |
 
-The complete MP3D ObjectNav validation split contains 2,195 episodes across 11 scenes. This repository covers only the first selected scene and **does not report the full MP3D validation benchmark**.
+The most accurate description is therefore a **runnable single-scene reproduction and audit of SG-Nav**, not a reproduction of the complete MP3D benchmark score.
 
-## Current progress
+## Paper benchmark and reproduction scope
 
-Artifacts verified in repository commit [`f5b4d54`](https://github.com/Craisy-Mostima/SG-Nav-Reproduction/commit/f5b4d54):
+The paper evaluates the MP3D validation split with:
 
-| Episode indices | Status | Runtime |
-| --- | --- | --- |
-| `0–4` | Completed and archived | Initial diagnostic run |
-| `5` | Interrupted and excluded | Initial diagnostic run |
-| `6–199` | Per-episode metrics and videos archived | Original-visual runtime, run in batches |
+- 11 indoor scenes;
+- 21 goal categories;
+- 2,195 ObjectNav episodes;
+- a maximum of 500 steps per episode;
+- SR, SPL, and SoftSPL as the reported metrics, all higher-is-better.
 
-The repository contains 199 archived episode outputs:
+The current repository evaluates:
 
-- 5 initial diagnostic episodes (`0–4`)
-- 194 original-visual episodes (`6–199`)
+- Dataset: Matterport3D ObjectNav validation;
+- Scene slice: `[0:1]`, scene `2azQ1b91cZZ`;
+- Completed episodes included in the statistics: 199;
+- 19 goal categories;
+- Success distance: `0.2 m`;
+- Maximum episode length: 500 steps;
+- Habitat-Lab: `0.2.1`;
+- Habitat-Sim: `0.2.4`;
+- GPU: NVIDIA GeForce RTX 4090 D.
 
-Episode `5` remains missing; **199/200 archived is not a completed 200-episode evaluation**. The two cohorts were run with different entry points and are reported separately below. Video presence alone is not a success label.
+The 199 completed episodes represent `9.07%` of the paper's full MP3D validation set. All aggregate scores give each episode equal weight, and per-category statistics use the same 199 records.
 
-## Original-visual cohort results (`6–199`)
+## Overall results across 199 episodes
 
-The table is calculated from the per-episode Habitat metric dictionaries in the [original-visual batch logs](artifacts/logs/original_visual/). Each episode ID from `6` through `199` has exactly one completed metric record in the archived batch logs. Controller logs are retained for provenance but are **not** counted a second time.
+The metrics were recomputed from 199 Habitat records in the [batch logs](artifacts/logs/original_visual/) and the [per-episode result file](artifacts/results/experiment_0_scene_0/results.txt), deduplicated by episode ID. Controller logs and running averages are not counted again.
 
-| Measure | Result |
+| Metric | Result |
 | --- | ---: |
-| Completed episodes with metrics | `194/194` |
-| Successes | `68/194` |
-| Success rate | `0.350515` |
-| Mean SPL | `0.128256` |
-| Mean SoftSPL | `0.193200` |
-| Mean distance to goal | `6.102630 m` |
-| Episodes with 500 recorded steps | `65/194` |
+| Valid completed records | `199/199` |
+| Successful episodes | `70/199` |
+| **SR** | **`35.18%`** |
+| **Mean SPL** | **`12.61%`** |
+| **Mean SoftSPL** | **`19.04%`** |
+| Mean final distance to goal | `6.048 m` |
+| Median final distance to goal | `3.005 m` |
+| Mean episode length | `283.24` steps |
+| Median episode length | `253` steps |
+| Episodes reaching 500 steps | `66/199` (`33.17%`) |
 
-These are descriptive results for one MP3D scene and one runtime configuration. They are **not** the paper's reproduced full-validation score. In particular, do not silently merge this 194-episode cohort with the earlier five diagnostic episodes to label the result a 200-episode score.
+SPL and SoftSPL are stored as ratios in `[0,1]` in the logs. They are shown as percentages here to match the paper's tables.
 
-The audit found 29 batch logs containing 194 unique completed metric records with no missing IDs in `6–199`. The Git tree contains 194 correspondingly numbered original-visual MP4 entries (`vid_000006.mp4` through `vid_000199.mp4`) and five initial diagnostic MP4 entries (`0–4`). The archived original-visual videos use Git LFS. This inventory checks Git entries and metric records; it is not a frame-by-frame video integrity test.
+## Comparison with the paper
 
-## Initial five-episode results
+The table below uses the paper's complete **SG-Nav-LLaMA** configuration from Table 2 as a numerical reference. It is useful for judging scale, but it is **not a controlled, like-for-like benchmark comparison**.
 
-The following table reports only the initial completed episodes `0–4`, from the [initial result file](artifacts/results/experiment_0_scene_0/results.txt). It is an early diagnostic baseline, **not** part of the 194-episode aggregate above.
+| Metric | This single-scene evaluation | Paper SG-Nav-LLaMA | Absolute gap | Paper-score retention |
+| --- | ---: | ---: | ---: | ---: |
+| SR | `35.18%` | `40.1%` | `-4.92` pp | `87.72%` |
+| SPL | `12.61%` | `16.0%` | `-3.39` pp | `78.84%` |
+| SoftSPL | `19.04%` | `24.9%` | `-5.86` pp | `76.47%` |
 
-| Episode | Steps | Termination | Distance to goal (m) | Success | SPL | SoftSPL |
-| ---: | ---: | --- | ---: | ---: | ---: | ---: |
-| 0 | 49 | Planner STOP after target detection | 11.059553 | 0 | 0.000000 | 0.000000 |
-| 1 | 276 | Planner STOP after target detection | 0.015518 | 1 | 0.058922 | 0.058462 |
-| 2 | 118 | Planner STOP after target detection | 0.042603 | 1 | 0.163049 | 0.160161 |
-| 3 | 93 | Planner STOP after target detection | 7.309648 | 0 | 0.000000 | 0.000000 |
-| 4 | 500 | Episode step limit | 1.291116 | 0 | 0.000000 | 0.194044 |
+Interpretation:
 
-Aggregate metrics over these five initial episodes:
+- **SR is in the same broad range, but a meaningful gap remains.** A total of 70/199 episodes succeeded, so the reproduced system is functional; however, one scene cannot represent the complete MP3D distribution.
+- **Efficiency lags more than success.** The larger relative gaps in SPL and SoftSPL indicate longer routes and more trajectories that approach a goal without converting that progress into a valid success.
+- **No single component can be blamed from these data alone.** The scene distribution, LLM/VLM, PyTorch/CUDA compatibility environment, and batch execution protocol all differ. Controlled ablations are required for causal claims.
 
-- Success Rate: `0.400000`
-- Mean SPL: `0.044394`
-- Mean SoftSPL: `0.082533`
-- Mean distance to goal: `3.943688 m`
+Table 1 of the paper also reports `40.2% SR / 16.0% SPL` for SG-Nav-GPT on MP3D. This reproduction did not use GPT-4, so that row is not used as the primary reference.
 
-Episodes `0` and `3` demonstrate false or incorrect-instance stopping: SG-Nav's internal planner considered the detected target reached, while Habitat's ground-truth distance remained large.
+## Failure structure and diagnostics
 
-## Visualization runtime
+There are 129 failures among the 199 episodes:
 
-The original navigation files remain available as:
+| Diagnostic slice | Count | Share of all 199 | Interpretation |
+| --- | ---: | ---: | --- |
+| Failed after reaching 500 steps | `66` | `33.17%` | The largest single failure bucket; no valid STOP was completed before the step limit |
+| Ended before 500 steps but failed | `63` | `31.66%` | May include wrong goals, wrong instances, planner STOPs, or loop exits; aggregate logs cannot separate them |
+| Failed with final distance `>5 m` | `80` | `40.20%` | Most failures still ended far from the target |
+| Failed with final distance `≤1 m` | `14` | `7.04%` | The agent approached the goal but did not meet the complete success condition |
+| Failed with final distance `≤0.2 m` | `4` | `2.01%` | Episodes `58/92/144/194` all reached 500 steps, indicating failure to STOP near the success radius |
+| Failed with SoftSPL `>0` | `72` | `36.18%` | Some navigation progress was made but did not become a final success |
+
+All 66 episodes that reached the 500-step limit failed. The highest-priority follow-up checks are therefore:
+
+1. STOP triggering when the agent is already near a target;
+2. whether re-perception rejects wrong goals or instances early enough;
+3. frontier selection and repeated exploration in long episodes;
+4. consistency between Habitat success and the planner's internal notion of arrival.
+
+Episodes `0` and `3` show a related pattern: the planner stopped after target detection, while Habitat still reported final distances of `11.060 m` and `7.310 m`.
+
+## Per-category statistics
+
+These values describe one scene only, and category sample sizes are highly imbalanced. Categories with `n<10` should not be treated as stable performance estimates.
+
+| Goal | n | Successes | SR | SPL | SoftSPL | Mean final distance (m) | 500-step episodes |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| chair | 38 | 26 | `68.42%` | `31.63%` | `33.61%` | 1.766 | 12 |
+| cabinet | 34 | 10 | `29.41%` | `12.17%` | `18.53%` | 4.541 | 3 |
+| table | 25 | 17 | `68.00%` | `15.45%` | `18.78%` | 0.723 | 7 |
+| cushion | 21 | 7 | `33.33%` | `8.05%` | `16.66%` | 3.748 | 2 |
+| counter | 12 | 4 | `33.33%` | `12.94%` | `23.31%` | 4.979 | 7 |
+| picture | 10 | 0 | `0.00%` | `0.00%` | `12.76%` | 7.325 | 2 |
+| plant | 8 | 2 | `25.00%` | `5.34%` | `16.32%` | 5.090 | 1 |
+| chest_of_drawers | 7 | 1 | `14.29%` | `2.93%` | `6.22%` | 16.926 | 1 |
+| sink | 7 | 0 | `0.00%` | `0.00%` | `6.82%` | 9.032 | 7 |
+| sofa | 6 | 2 | `33.33%` | `15.79%` | `28.31%` | 8.180 | 3 |
+| towel | 6 | 0 | `0.00%` | `0.00%` | `2.49%` | 15.961 | 5 |
+| bed | 4 | 0 | `0.00%` | `0.00%` | `8.74%` | 18.458 | 4 |
+| clothes | 4 | 0 | `0.00%` | `0.00%` | `8.96%` | 25.264 | 4 |
+| seating | 4 | 0 | `0.00%` | `0.00%` | `2.05%` | 13.342 | 0 |
+| toilet | 4 | 1 | `25.00%` | `6.55%` | `20.94%` | 6.302 | 2 |
+| fireplace | 3 | 0 | `0.00%` | `0.00%` | `1.48%` | 23.988 | 1 |
+| shower | 3 | 0 | `0.00%` | `0.00%` | `10.92%` | 9.916 | 3 |
+| bathtub | 2 | 0 | `0.00%` | `0.00%` | `13.40%` | 10.700 | 2 |
+| stool | 1 | 0 | `0.00%` | `0.00%` | `22.40%` | 8.485 | 0 |
+
+Among categories with larger samples, `chair` and `table` reach approximately 68% SR, while `picture` is at 0%. This strong dependence on the category mix within one scene is another reason not to extrapolate the result to the paper's complete benchmark.
+
+## Why this is not a strict paper-configuration reproduction
+
+| Item | Paper | Repository run |
+| --- | --- | --- |
+| MP3D evaluation scope | 11 scenes, 2,195 episodes | 1 scene, 199 completed episodes |
+| LLM | LLaMA-7B or GPT-4-0613 | Ollama `llama3.2-vision` |
+| VLM / short-edge verification | LLaVA-1.6 (Mistral-7B) | The same `llama3.2-vision` model |
+| Agent camera height | Reported as `0.90 m` | Configuration file uses `0.88 m` |
+| PyTorch | Author instructions specify `<=1.9` | `2.0.1+cu118` with compatibility patches |
+| Execution protocol | Batch details not reported | Multiple batches using original and visualization entry points, including interruptions and reruns |
+| Visualization | Original implementation | Added node, edge, and model-response panels; intended to preserve navigation behavior, but not formally proven equivalent |
+
+In addition, [`manifests/upstream-source-commit.txt`](manifests/upstream-source-commit.txt) is currently empty. The environment's `pip-freeze` references commit `d56863c...`, but the top-level source snapshot still lacks one explicit, complete upstream commit record. Filling it in would improve provenance.
+
+## Log and artifact audit
+
+- The repository contains 37 logs covering batch execution, controllers, and diagnostics.
+- The batch logs and per-episode result file provide 199 unique valid records; each episode is counted once.
+- The Git tree contains 199 corresponding MP4 entries. This is a file-inventory check, not a frame-by-frame integrity test.
+- An earlier `114–123` attempt recorded an Ollama CUDA stream-capture error. Episode `115` was later rerun successfully; the failed attempt is not counted.
+- A written video proves that visualization output completed, **not that navigation succeeded**. SR, SPL, and SoftSPL must come from Habitat metrics.
+
+## Visualization and runtime patch
+
+The original navigation entry points remain available as:
 
 - `SG_Nav.py`
 - `scenegraph.py`
 
-The additional visualization entry points are:
+The added visualization entry points are:
 
 - `SG_Nav_original_visual.py`
 - `scenegraph_original_visual.py`
 
-These files populate the previously blank visualization panels:
-
-- Scene Graph Nodes
-- Scene Graph Edges
-- LLM Explanation
-
-The visualization implementation uses state and model responses already produced by the algorithm. It was designed not to change navigation actions, target selection, FMM planning, STOP thresholds, success distance, or Habitat metrics; this statement describes the patch intent, not a formal proof of behavioral equivalence.
-
-The runtime wrapper additionally controls Ollama resource usage with:
-
-- one Ollama server
-- one loaded model
-- one parallel request
-- context length `4096`
-- model cleanup between batches
-
-These settings address deployment stability and GPU placement rather than intentionally changing the navigation policy. The episodes were executed in multiple batches and after some interrupted attempts, not as one uninterrupted 200-episode process.
+They populate the Scene Graph Nodes, Scene Graph Edges, and LLM Explanation panels. The runtime wrapper also limits Ollama to one server, one loaded model, and one parallel request, with a fixed context length of `4096`, to control VRAM usage and batch stability. See the [original-visual runtime patch](patches/SGNav_mp3d_original_visual_runtime_v2_20260831/README.md) for details.
 
 ## Repository layout
 
-- `code/SG-Nav-original/`: cloud source snapshot and visualization entry points
-- `artifacts/logs/`: initial diagnostic logs
-- `artifacts/logs/original_visual/`: original-visual runtime and controller logs
-- `artifacts/results/`: raw and aggregate result files
-- `artifacts/videos/`: initial diagnostic videos
-- `artifacts/videos/experiment_0_original_visual_scene_0/`: original-visual videos
-- `patches/`: compatibility, diagnostic, and runtime patch packages
-- `environment/`: Python, Conda, CUDA, GPU, and package information
-- `manifests/`: source revisions and SHA256 checksums
+- `code/SG-Nav-original/`: upstream source snapshot and visualization entry points;
+- `artifacts/logs/`: execution and diagnostic logs;
+- `artifacts/logs/original_visual/`: main batch and controller logs;
+- `artifacts/results/`: raw and aggregate result files;
+- `artifacts/videos/`: diagnostic and original-visual videos;
+- `patches/`: compatibility, diagnostic, and runtime patches;
+- `environment/`: Python, Conda, CUDA, GPU, and package information;
+- `manifests/`: source checksums and provenance records.
 
-MP4 files in the original-visual checkpoint are stored using Git LFS. After cloning, run `git lfs pull` to obtain the media rather than only their Git pointer files. Licensed scenes, episode datasets, and model weights must be obtained separately.
+Videos are stored with Git LFS. After cloning, run:
 
-## Log and artifact audit
+```bash
+git lfs pull
+```
 
-- The repository contains 37 log files: 29 original-visual batch logs, six original-visual controller logs, and two earlier diagnostic logs.
-- The 29 batch logs provide one completed Habitat metric dictionary for each ID in `6–199`; controller logs may overlap in text and are excluded from the aggregate.
-- The Git tree contains 199 MP4 entries in total: five initial diagnostic videos and 194 original-visual videos. Episode `5` has neither an accepted result nor an archived video.
-- An earlier `114–123` attempt records an Ollama CUDA stream-capture error. Episode `115` was subsequently rerun successfully; the aborted attempt is retained for troubleshooting, not counted as an additional episode.
-- A small final distance does not guarantee Habitat success. For example, episode `194` reports `distance_to_goal=0.032481 m` but `success=0`; the log alone does not establish the exact STOP/metric cause.
+Matterport3D/HM3D scenes, ObjectNav episode data, and model weights are governed by their respective licenses and are not included. Obtain them from the official sources.
 
-To complete the selected 200-episode scene slice, rerun and verify episode `5` under a documented runtime, archive its metrics and video, and then recompute a clearly defined 200-episode aggregate. Reproducing the **full** MP3D validation result additionally requires the remaining scenes and their episodes.
+## Optional follow-up work
 
-## Interpretation policy
+The 199 episodes provide a completed milestone for this single-scene reproduction exercise. Further research could include:
 
-This repository separates:
+1. Pinning random seeds, model versions, the Ollama version, and the upstream commit.
+2. Adding action-level traces to investigate wrong-target STOP, near-goal failure to STOP, and step-limit failures.
+3. Evaluating additional MP3D scenes to assess cross-scene performance.
+4. Using the paper's model configuration and all 2,195 episodes for a full benchmark comparison.
 
-1. the upstream navigation implementation;
-2. compatibility changes needed to run the software in the cloud environment;
-3. visualization-only additions;
-4. diagnostic instrumentation;
-5. raw experimental outputs.
+## References
 
-A generated video is evidence that an episode completed its visualization write, but it is not evidence of navigation success. Official success, SPL, SoftSPL, and distance-to-goal values must be taken from Habitat metrics.
+- [NeurIPS 2024 paper page](https://proceedings.neurips.cc/paper_files/paper/2024/hash/098491b37deebbe6c007e69815729e09-Abstract-Conference.html)
+- [Paper PDF](https://proceedings.neurips.cc/paper_files/paper/2024/file/098491b37deebbe6c007e69815729e09-Paper-Conference.pdf)
+- [Official SG-Nav repository](https://github.com/bagh2178/SG-Nav)
+- [SG-Nav project page](https://bagh2178.github.io/SG-Nav/)
 
-The `6–199` cohort aggregate above is calculated from Habitat metrics, not visual inspection. It should not be presented as the selected 200-episode result or as the full MP3D validation benchmark. Results from re-runs should be selected by episode ID and provenance rather than double-counted from controller or failed-attempt logs.
-
-## Data and model policy
-
-This repository intentionally does not include:
-
-- Matterport3D or HM3D scenes
-- licensed ObjectNav episode datasets
-- SAM, GLIP, GroundingDINO, BERT, or Ollama model weights
-- Conda environments or package caches
-- CUDA build artifacts
-
-Obtain datasets and model weights from their official sources and comply with their respective licenses and terms of use.
-
+```bibtex
+@inproceedings{yin2024sgnav,
+  title={SG-Nav: Online 3D Scene Graph Prompting for LLM-based Zero-shot Object Navigation},
+  author={Yin, Hang and Xu, Xiuwei and Wu, Zhenyu and Zhou, Jie and Lu, Jiwen},
+  booktitle={Advances in Neural Information Processing Systems},
+  volume={37},
+  year={2024}
+}
+```
